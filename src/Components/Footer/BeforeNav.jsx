@@ -1,16 +1,21 @@
-
-
-
+import { MdClose } from "react-icons/md";
+import { useState } from "react";
 
 function BeforeNav() {
+    const [click, setclick] = useState(false)
+
     const Timer =[{dayTime:"00",name:"D "},
                   {dayTime:"00",name:"H "},
                   {dayTime:"00",name:"M "},
                   {dayTime:"00",name:"S "},
                  ]
     return (
+        <>
+        { click?
+            null
+        :
         <div className="relative flex flex-col justify-center items-center ">
-            <button className="absolute right-0 top-0">close</button>
+            <button onClick={()=>{setclick(!click)}} className="absolute right-0 top-0"><MdClose /></button>
             <section>Makar Sankranti Offer</section>
             <section>- Flat 10% Off + 20% Cashback + Self Paced</section>
             <section>Course Free</section>
@@ -21,9 +26,11 @@ function BeforeNav() {
                         <span key={key}>{items.dayTime} {items.name} </span>
                     )
                 })}
-            </section>
-            
+                <button className="underline">GRAB NOW</button>
+            </section> 
         </div>
+        }
+        </>
     );
 }
 
