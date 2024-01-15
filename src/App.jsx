@@ -1,9 +1,10 @@
-import Navbar from "./Components/Footer/Navbar"
+import Footer from "./Components/Footer/Footer"
+
 function App() {
 
   return (
     <>
-     <Navbar/>
+     <Footer/>
     </>
   )
 }
