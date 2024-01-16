@@ -2,7 +2,7 @@ import { MdClose } from "react-icons/md";
 import { useState } from "react";
 
 function BeforeNav(prop) {
-    const [clickClose, setclickClose] = useState(false)
+    const [clickClose, setclickClose] = useState(prop.value)
 
     const Timer =[{dayTime:"00",name:"D "},
                   {dayTime:"00",name:"H "},
@@ -15,7 +15,7 @@ function BeforeNav(prop) {
             null
         :
         <div className="relative flex flex-col justify-center items-center ">
-            <button onClick={()=>{setclickClose(!clickClose); prop.value=clickClose}} className="absolute right-0 top-0"><MdClose /></button>
+            <button onClick={()=>{setclickClose(!clickClose)}} className="absolute right-0 top-0"><MdClose /></button>
             <section>Makar Sankranti Offer</section>
             <section>- Flat 10% Off + 20% Cashback + Self Paced</section>
             <section>Course Free</section>
