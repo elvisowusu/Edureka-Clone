@@ -5,7 +5,6 @@ import Navbar from "./Navbar";
 function Footer() {
     return (
         <div>
-           <BeforeNav/>
            <Navbar/>
            <AfterNav/> 
         </div>
