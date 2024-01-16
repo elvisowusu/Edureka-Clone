@@ -1,8 +1,8 @@
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
 
-function BeforeNav(prop) {
-    const [clickClose, setclickClose] = useState(prop.value)
+function BeforeNav() {
+    const [clickClose, setclickClose] = useState(false)
 
     const Timer =[{dayTime:"00",name:"D "},
                   {dayTime:"00",name:"H "},
