@@ -1,7 +1,7 @@
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
 
-function BeforeNav() {
+function BeforeNav({onCloseClicked}) {
     const [clickClose, setclickClose] = useState(false)
 
     const Timer =[{dayTime:"00",name:"D "},
@@ -9,13 +9,17 @@ function BeforeNav() {
                   {dayTime:"00",name:"M "},
                   {dayTime:"00",name:"S "},
                  ]
+    const handleClicks = () => {
+        setclickClose(!clickClose)
+        onCloseClicked();
+    }
     return (
         <>
         { clickClose?
             null
         :
         <div className="relative flex flex-col justify-center items-center ">
-            <button onClick={()=>{setclickClose(!clickClose)}} className="absolute right-0 top-0"><MdClose /></button>
+            <button onClick={handleClicks} className="absolute right-0 top-0"><MdClose /></button>
             <section>Makar Sankranti Offer</section>
             <section>- Flat 10% Off + 20% Cashback + Self Paced</section>
             <section>Course Free</section>
