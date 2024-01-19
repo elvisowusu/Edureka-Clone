@@ -2,7 +2,7 @@
 function AfterNav() {
     return (
         <div>
-            AFTER NAVBAR
+            
         </div>
     );
 }
