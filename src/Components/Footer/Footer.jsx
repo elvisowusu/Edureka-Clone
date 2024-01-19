@@ -4,22 +4,33 @@ import Navbar from "./Navbar";
 import { useState } from "react";
 
 function Footer() {
+    // State to manage the close/open state of BeforeNav
     const [clickClose, setClickClose] = useState(false);
-    const [viewOffer, setViewOffer] =useState(true)
+    // State to manage the visibility of the offer
+    const [viewOffer, setViewOffer] = useState(true);
+
+    // Function to handle click and close BeforeNav
     const handleClickClose = () => {
         setClickClose(!clickClose);
-        setViewOffer(!viewOffer)
+        setViewOffer(!viewOffer); // Toggle visibility of the offer
     };
-    const handleViewOffer =()=>{
-        setViewOffer(!viewOffer)
-        setClickClose(!clickClose)
-    }
+
+    // Function to handle click and toggle the visibility of the offer
+    const handleViewOffer = () => {
+        setViewOffer(!viewOffer); // Toggle visibility of the offer
+        setClickClose(!clickClose);
+    };
 
     return (
         <div>
-           {viewOffer && <BeforeNav clickClose={clickClose} handleClickClose={handleClickClose}/>}
-           <Navbar clickClose={clickClose} handleClickClose={handleClickClose} viewOffer={viewOffer} handleViewOffer={handleViewOffer}/>
-           <AfterNav/> 
+            {/* Render BeforeNav only if viewOffer is true */}
+            {viewOffer && <BeforeNav clickClose={clickClose} handleClickClose={handleClickClose} />}
+
+            {/* Render Navbar with necessary props */}
+            <Navbar clickClose={clickClose} handleClickClose={handleClickClose} viewOffer={viewOffer} handleViewOffer={handleViewOffer} />
+
+            {/* Render AfterNav */}
+            <AfterNav /> 
         </div>
     );
 }
