@@ -8,9 +8,11 @@ function Footer() {
     const [viewOffer, setViewOffer] =useState(true)
     const handleClickClose = () => {
         setClickClose(!clickClose);
+        setViewOffer(!viewOffer)
     };
     const handleViewOffer =()=>{
         setViewOffer(!viewOffer)
+        setClickClose(!clickClose)
     }
 
     return (
