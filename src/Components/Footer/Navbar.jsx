@@ -1,7 +1,7 @@
 import { TfiMenu } from "react-icons/tfi";
 import { BiSearch, BiSolidPhone } from "react-icons/bi";
 
-function Navbar({ clickClose, handleClickClose, viewOffer, handleViewOffer }) {
+function Navbar({ clickClose, handleClickClose }) {
     return (
         <div>
             {/* Navbar container with red background */}
@@ -22,7 +22,7 @@ function Navbar({ clickClose, handleClickClose, viewOffer, handleViewOffer }) {
                     <section className="inline-flex items-center gap-1">
                         <BiSolidPhone className="text-white" />
                         {/* Render View Offer button only if clickClose is true */}
-                        {clickClose && <button onClick={handleViewOffer}>View Offer</button>}
+                        {!clickClose && <button onClick={handleClickClose}>View Offer</button>}
                     </section>
                 </section>
 

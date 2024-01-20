@@ -12,8 +12,9 @@ function BeforeNav({ clickClose, handleClickClose }) {
 
   return (
     <>
-      {/* If clickClose is true, do not render the component */}
-      {clickClose ? null : (
+      {/* If cli
+      ckClose is true, do not render the component */}
+      {clickClose ? (
         <div className="relative flex flex-col justify-center items-center ">
           {/* Close button to handle click and close the component */}
           <button onClick={handleClickClose} className="absolute right-0 top-0">
@@ -40,7 +41,7 @@ function BeforeNav({ clickClose, handleClickClose }) {
             <button className="underline">GRAB NOW</button>
           </section>
         </div>
-      )}
+      ):null}
     </>
   );
 }
