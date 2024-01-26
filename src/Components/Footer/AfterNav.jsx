@@ -12,13 +12,13 @@ function AfterNav() {
                         {name:"Project Management and Methodologies",link:""}
                     ]
     return (
-        <div className="flexs">
+        <div className="flex">
            <section>
-                <p >Browse <span className="inline-flex items-center">Categories <IoMdArrowDropdown className="w-[1.5rem] h-[1.5rem]" /> </span></p>
+                <p >Browse <span className="block">Categories <IoMdArrowDropdown className="w-[1.5rem] h-[1.5rem] inline" /> </span></p>
            </section>
-           <section>
+           <section className="flex justify-evenly items-center">
                 {Courses.map((course,key)=>{
-                    <a key={key} href={course.link}>{course.name}</a>
+                   return <a key={key} href={course.link}>{course.name}</a>
                 })}
            </section>
            <TfiMenu/>
