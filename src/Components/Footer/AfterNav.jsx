@@ -1,5 +1,5 @@
 import { IoMdArrowDropdown } from "react-icons/io";
-import { TfiMenu } from "react-icons/tfi";
+import { IoMenuOutline } from "react-icons/io5";
 
 function AfterNav({screenWidth}) {
     const Courses = [
@@ -12,10 +12,10 @@ function AfterNav({screenWidth}) {
                         {name:"Project Management and Methodologies",link:""}
                     ]
     return (
-        <div className="flex  w-[100%] shadow-inner mt-2 items-cente px-[1rem] pt-[0.2rem]">
+        <div className="flex  w-[100%] shadow-inner mt-2 items-center px-[1rem] pt-[0.2rem]">
             {/* md:max-h-[45px] md:min-h-[45px] md:px-[40px] md:pt-[7px] */}
            <section>
-                <p >Browse <span className="flex font-semibold text-[15px] leading-3 mr-[1rem]">Categories <IoMdArrowDropdown className="inline " /> </span></p>
+                <p className="text-[12px]">Browse <span className="flex font-semibold text-[14px] leading-3 mr-[1.5rem]">Categories <IoMdArrowDropdown className="inline " /> </span></p>
                 {/* w-[1.5rem] h-[1.5rem] */}
            </section>
            <section className="flex items-center justify-between flex-grow-[1]">
@@ -26,7 +26,7 @@ function AfterNav({screenWidth}) {
                 //    py-[5px] px-[10px]
                 })}
            </section>
-           <button className="rounded-[16.5px] hover:bg-slate-400 bg-opacity-10 py-[5px] px-[10px] font-extrabold"><TfiMenu className="opacity-100"/></button>
+           <button className="rounded-[16.5px] hover:bg-slate-400 bg-opacity-10 py-[5px] px-[10px] font-extrabold"><IoMenuOutline className="opacity-100 h-[1.2rem] w-[1.2rem]"/></button>
            </section>
         </div>
     );

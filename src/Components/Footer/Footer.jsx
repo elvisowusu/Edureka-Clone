@@ -25,7 +25,7 @@ function Footer() {
     return () => {
         window.removeEventListener('resize',handleresize)
     };
-   }, [])
+   }, [state.screenWidth])
    const handleClickClose=()=>{
     dispatch({type:'CLOSE'})
    }
@@ -34,7 +34,7 @@ function Footer() {
         <div className="text-[14px]">
             {state.clickClose && <BeforeNav clickClose={state.clickClose} handleClickClose={handleClickClose} />}
             <Navbar clickClose={state.clickClose} handleClickClose={handleClickClose} />
-            <AfterNav screenWidth={state.screenWidth}/> 
+            <AfterNav screenWidth={state.screenWidth} handleresize={useEffect}/> 
         </div>
     );
 }
