@@ -1,7 +1,7 @@
 import AfterNav from "./AfterNav";
 import BeforeNav from "./BeforeNav";
 import Navbar from "./Navbar";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer} from "react";
 
 const reducer=(state,action)=>{
     switch(action.type){
