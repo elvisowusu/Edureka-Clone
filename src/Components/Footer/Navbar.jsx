@@ -17,7 +17,7 @@ function Navbar({ clickClose, handleClickClose }) {
 
                     <section className="inline-flex items-center gap-2 pb-2">
                         <BiSolidPhone className="text-white h-[1.1rem] w-[1.1rem]" />
-                        {!clickClose && <button className="bg-white rounded-sm px-[0.3rem] py-[0.1rem]" onClick={handleClickClose}>View Offer</button>}
+                        {!clickClose && <button className="bg-white rounded-sm px-[0.87rem] py-[0.1rem] text-blue-600 text-[0.98rem] font-medium" onClick={handleClickClose}>View Offer</button>}
                     </section>
                 </section>
 
