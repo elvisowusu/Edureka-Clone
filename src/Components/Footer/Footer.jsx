@@ -31,10 +31,10 @@ function Footer() {
    }
 
     return (
-        <div className="font-openSans">
+        <div className="text-[14px]">
             {state.clickClose && <BeforeNav clickClose={state.clickClose} handleClickClose={handleClickClose} />}
             <Navbar clickClose={state.clickClose} handleClickClose={handleClickClose} />
-            <AfterNav /> 
+            <AfterNav screenWidth={state.screenWidth}/> 
         </div>
     );
 }

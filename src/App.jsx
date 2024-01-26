@@ -4,10 +4,10 @@ import GrabOffer from "./Components/Footer/GrabOffer"
 function App() {
 
   return (
-    <>
+    <div className="font-openSans">
      <Footer/>
      {/* <GrabOffer/> */}
-    </>
+    </div>
   )
 }
 
