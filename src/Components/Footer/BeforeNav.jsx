@@ -13,9 +13,9 @@ function BeforeNav({ clickClose, handleClickClose }) {
   return (
     <>
       {clickClose ? (
-        <div className="relative flex flex-col justify-center items-center ">
-          <button onClick={handleClickClose} className="absolute right-0 top-0">
-            <MdClose />
+        <div className="relative flex flex-col justify-center items-center">
+          <button onClick={handleClickClose} className="absolute right-3 top-1">
+            <MdClose className="h-[1rem] w-[1rem]"/>
           </button>
           <section>Makar Sankranti Offer</section>
           <section>- Flat 10% Off + 20% Cashback + Self Paced</section>

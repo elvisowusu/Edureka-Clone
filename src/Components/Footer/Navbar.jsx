@@ -5,7 +5,7 @@ function Navbar({ clickClose, handleClickClose }) {
     return (
         <div>
             <div className="bg-red-200 px-[1rem] pt-[1rem] pb-[0.5rem]">
-                <section className="flex justify-between pb-[0.5rem]">
+                <section className="flex justify-between pb-[0.2rem]">
                     <section className="flex items-center">
                         <IoMenuOutline className="w-[1.5rem] h-[1.5rem] mb-2 text-white"/>
                         <img
@@ -17,11 +17,11 @@ function Navbar({ clickClose, handleClickClose }) {
 
                     <section className="inline-flex items-center gap-1">
                         <BiSolidPhone className="text-white h-[1.2rem] w-[1.2rem]" />
-                        {!clickClose && <button onClick={handleClickClose}>View Offer</button>}
+                        {!clickClose && <button className="bg-white rounded-sm px-[0.3rem] py-[0.1rem]" onClick={handleClickClose}>View Offer</button>}
                     </section>
                 </section>
 
-                <section className="flex items-center justify-center h-[2.4rem] w-full">
+                <section className="flex items-center justify-center h-[2rem] w-full">
                     <input
                         className="w-full h-[100%] px-[0.9rem] py-[0.2rem] rounded-l-sm border focus:border-black outline-none"
                         type="search"
