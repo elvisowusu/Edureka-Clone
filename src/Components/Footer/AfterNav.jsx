@@ -17,11 +17,9 @@ function AfterNav() {
                 <p >Browse <span className="inline-flex items-center">Categories <IoMdArrowDropdown className="w-[1.5rem] h-[1.5rem]" /> </span></p>
            </section>
            <section>
-                {
-                    Courses.map((course,key)=>{
-                        <a key={key} href={course.link}>{course.name}</a>
-                    })
-                }
+                {Courses.map((course,key)=>{
+                    <a key={key} href={course.link}>{course.name}</a>
+                })}
            </section>
            <TfiMenu/>
         </div>
