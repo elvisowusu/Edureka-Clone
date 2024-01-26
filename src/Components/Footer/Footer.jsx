@@ -31,7 +31,7 @@ function Footer() {
    }
 
     return (
-        <div>
+        <div className="font-openSans">
             {state.clickClose && <BeforeNav clickClose={state.clickClose} handleClickClose={handleClickClose} />}
             <Navbar clickClose={state.clickClose} handleClickClose={handleClickClose} />
             <AfterNav /> 
