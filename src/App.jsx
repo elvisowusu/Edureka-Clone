@@ -5,8 +5,8 @@ function App() {
 
   return (
     <div className="font-openSans">
-     <Footer/>
-     {/* <GrabOffer/> */}
+     {/* <Footer/> */}
+     <GrabOffer/>
     </div>
   )
 }

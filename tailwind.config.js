@@ -9,6 +9,9 @@ export default {
       fontFamily:{
         openSans:'Open Sans, sans-serif',
       },
+      backgroundImage:{
+        'offerBtn':'linear-gradient(to left,#fad961,#f76b1c)',
+      }
     },
   },
   plugins: [],
