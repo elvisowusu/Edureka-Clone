@@ -9,31 +9,31 @@ function GrabOffer() {
 
     return (
         <div>
-            <section className="relative p-[1.1rem]">
+            <section className="relative p-[1.1rem] bg-OfferHeading rounded-md pb-[2.5rem] mb-[1.6rem]">
                 <button className="absolute right-2 top-2 "><AiOutlineClose /> </button>
-                <section className="border border-dashed p-[1rem]">
-                    <p>
-                        Maker Sankranti Offer - Flat 10% Off + 20% Cashback + Self Paced Course Free
+                <section className="border border-dashed rounded-sm p-[1rem] text-white text-[1.3rem]">
+                    <p className="topic text-[1.3rem] font-semibold">
+                        Month End Offer - Upto 30% Off
                     </p>
-                    <p className="mt-[0.3rem]">
+                    <p className="my-[0.4rem] text-[0.8rem]">
                         Offer ending in
                     </p>
-                    <section className="text-center">
+                    <section className="text-center bg-OfferTimer rounded-md py-[0.3rem]">
                     {Timer.map((items,key)=>{
                     return(
-                        <span key={key}>{items.dayTime} {items.name} </span>
+                        <span key={key}>{items.dayTime} : {items.name} </span>
                     )
                     })}
                     </section>
                 </section>
             </section>
             <section className="flex flex-col justify-center px-[2rem]">
-                <section className="flex items-center">
-                    <img className="h-[3rem]" src="https://previews.123rf.com/images/rukanoga/rukanoga1202/rukanoga120201859/12171053-green-plastic-package-with-a-big-word-50-isolated-on-white-background-3d-rendered.jpg" alt="giftbag" />
-                    <h2>Avail Offer</h2>
+                <section className="flex items-center gap-2">
+                    <img className="h-[4rem]" src="https://previews.123rf.com/images/rukanoga/rukanoga1202/rukanoga120201859/12171053-green-plastic-package-with-a-big-word-50-isolated-on-white-background-3d-rendered.jpg" alt="giftbag" />
+                    <h2 className="text-[1.3rem]">Avail Offer</h2>
                 </section>
-                <input className="w-[100%] h-[45px] px-[12px] py-[6px] border border-[#c3c3c3] rounded-[0.3rem]" type="email" name="availEmail" placeholder="e.g. sara@gmail.com*" required id="availEmail" /><br />
-                <input className="w-[100%] h-[45px]" type="number" required placeholder="Mobile Number*" name="availNumber" id="availrNumber" /><br />
+                <input className="w-[100%] h-[45px] px-[12px] py-[6px] border border-[#c3c3c3] outline-none focus:border-blue-400 rounded-[0.3rem] focus:bg-blue-50" type="email" name="availEmail" placeholder="e.g. sara@gmail.com*" required id="availEmail" /><br />
+                <input className="w-[100%] h-[45px] px-[12px] py-[6px] border border-[#c3c3c3] outline-none focus:border-blue-400 rounded-[0.3rem] focus:bg-blue-50" type="number" required placeholder="Mobile Number*" name="availNumber" id="availrNumber" /><br />
                 <button className="bg-offerBtn w-[100%] h-[45px] font-bold rounded-[0.3rem] text-white">AVAIL OFFER NOW</button>
             </section>
         </div>
