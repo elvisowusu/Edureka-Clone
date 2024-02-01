@@ -33,14 +33,10 @@ function Footer() {
     dispatch({type:'CLOSE'})
     console.log(state.clickClose)
    }
-   const handleGrabOffer=()=>{
-    dispatch({type:'GRABOFFER'})
-   }
 
     return (
         <div className="text-[14px]">
-            {state.grabOffer && <GrabOffer grabOffer={state.grabOffer} handleGrabOffer={handleGrabOffer}/>}
-            {state.clickClose && <BeforeNav clickClose={state.clickClose} handleClickClose={handleClickClose} handleGrabOffer={handleGrabOffer}/>}
+            {state.clickClose && <BeforeNav clickClose={state.clickClose} handleClickClose={handleClickClose}/>}
             <Navbar clickClose={state.clickClose} handleClickClose={handleClickClose} />
             <AfterNav screenWidth={state.screenWidth} handleresize={useEffect}/> 
         </div>

@@ -1,7 +1,9 @@
 import { MdClose } from "react-icons/md";
+import { useState } from "react";
+import GrabOffer from "./GrabOffer";
 
-function BeforeNav({ clickClose, handleClickClose, handleGrabOffer }) {
-
+function BeforeNav({ clickClose, handleClickClose}) {
+ const [grabOffer, setGrabOffer] = useState(false);
   // Timer array with placeholders for day, hour, minute, and second
   const Timer = [
     { dayTime: "00", name: "D " },
@@ -10,8 +12,13 @@ function BeforeNav({ clickClose, handleClickClose, handleGrabOffer }) {
     { dayTime: "00", name: "S " },
   ];
 
+  const handleGrabOffer = () => {
+    setGrabOffer(!grabOffer);
+  };
+
   return (
     <>
+    {grabOffer && <GrabOffer grabOffer={grabOffer} handleGrabOffer={handleGrabOffer}/>}
       {clickClose ? (
         <div className="relative flex flex-col justify-center items-center">
           <button onClick={handleClickClose} className="absolute right-3 top-1">
