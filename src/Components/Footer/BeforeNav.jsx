@@ -1,6 +1,6 @@
 import { MdClose } from "react-icons/md";
 
-function BeforeNav({ clickClose, handleClickClose }) {
+function BeforeNav({ clickClose, handleClickClose, handleGrabOffer }) {
 
   // Timer array with placeholders for day, hour, minute, and second
   const Timer = [
@@ -26,7 +26,7 @@ function BeforeNav({ clickClose, handleClickClose }) {
             {Timer.map((items, key) => (
               <span key={key}>{items.dayTime} {items.name} </span>
             ))}
-            <button className="underline">GRAB NOW</button>
+            <button className="underline" onClick={handleGrabOffer}>GRAB NOW</button>
           </section>
         </div>
       ):null}

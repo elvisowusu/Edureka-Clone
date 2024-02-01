@@ -1,5 +1,6 @@
 import AfterNav from "./AfterNav";
 import BeforeNav from "./BeforeNav";
+import GrabOffer from "./GrabOffer";
 import Navbar from "./Navbar";
 import { useEffect, useReducer} from "react";
 
@@ -9,6 +10,8 @@ const reducer=(state,action)=>{
             return {...state,clickClose:!state.clickClose}
         case 'SCREENRESIZE':
             return {...state,screenWidth:window.innerWidth}
+        case 'GRABOFFER':
+            return {...state,grabOffer:!state.grapOffer}
         default:
             return state
     }
@@ -16,7 +19,7 @@ const reducer=(state,action)=>{
 
 function Footer() {
 
-   const [state, dispatch]=useReducer(reducer,{clickClose:true,screenWidth:window.innerWidth})
+   const [state, dispatch]=useReducer(reducer,{clickClose:true,screenWidth:window.innerWidth,grabOffer:false})
    useEffect(() => {
     const handleresize=()=>{
         dispatch({type:'SCREENRESIZE'});
@@ -28,11 +31,16 @@ function Footer() {
    }, [state.screenWidth])
    const handleClickClose=()=>{
     dispatch({type:'CLOSE'})
+    console.log(state.clickClose)
+   }
+   const handleGrabOffer=()=>{
+    dispatch({type:'GRABOFFER'})
    }
 
     return (
         <div className="text-[14px]">
-            {state.clickClose && <BeforeNav clickClose={state.clickClose} handleClickClose={handleClickClose} />}
+            {state.grabOffer && <GrabOffer grabOffer={state.grabOffer} handleGrabOffer={handleGrabOffer}/>}
+            {state.clickClose && <BeforeNav clickClose={state.clickClose} handleClickClose={handleClickClose} handleGrabOffer={handleGrabOffer}/>}
             <Navbar clickClose={state.clickClose} handleClickClose={handleClickClose} />
             <AfterNav screenWidth={state.screenWidth} handleresize={useEffect}/> 
         </div>
