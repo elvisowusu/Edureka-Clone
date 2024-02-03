@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 function Carousel({children: slides}) {
@@ -13,10 +14,10 @@ function Carousel({children: slides}) {
 
     return (
         <div className="relative mt-[0.5rem]">
-           <div className="flex overflow-hidden min-h-[480px]">{slides}</div> 
+           <div className="flex overflow-hidden min-h-[480px] transition-transform ease-out duration-500" style={{transform:`translateX(-${current*100}%)`}}>{slides}</div> 
            <section className="absolute top-[50%] flex justify-between w-full px-[1rem]">
-            <button><SlArrowLeft className="slider"/></button>
-            <button><SlArrowRight className="slider"/></button>
+            <button onClick={prevSlide}><SlArrowLeft className="slider"/></button>
+            <button onClick={nextSlide}><SlArrowRight className="slider"/></button>
            </section>
         </div>
     );
