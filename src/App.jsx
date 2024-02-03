@@ -1,4 +1,4 @@
-import Footer from "./Components/Footer/Footer"
+import Body from "./Components/Body/Body"
 import NewFooter from "./Components/NewFooter/newFooter"
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <div className="font-openSans">
      {/* <Footer/> */}
      <NewFooter/>
+     <Body/>
     </div>
   )
 }

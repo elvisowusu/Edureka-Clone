@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .slider{
+        @apply h-[2.5rem] w-[2.5rem] bg-white rounded-full p-[0.7rem];
+    }
+}
