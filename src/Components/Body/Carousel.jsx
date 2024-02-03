@@ -1,8 +1,13 @@
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 function Carousel({children: slides}) {
     return (
-        <div>
-           <div className="flex overflow-hidden">{slides}</div> 
+        <div className="relative mt-[0.5rem]">
+           <div className="flex overflow-hidden min-h-[480px]">{slides}</div> 
+           <section className="absolute top-[50%] flex justify-between w-full px-[1rem]">
+            <SlArrowLeft className="slider"/>
+            <SlArrowRight className="slider"/>
+           </section>
         </div>
     );
 }
