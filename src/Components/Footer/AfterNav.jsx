@@ -12,7 +12,7 @@ function AfterNav({screenWidth}) {
                         {name:"Project Management and Methodologies",link:""}
                     ]
     return (
-        <div className="flex  w-[100%] shadow-inner mt-2 items-center px-[1rem] pt-[0.2rem]">
+        <div className="flex  w-[100%] shadow-inner mt-2 mb-2 items-center px-[1rem] pt-[0.2rem]">
             {/* md:max-h-[45px] md:min-h-[45px] md:px-[40px] md:pt-[7px] */}
            <section>
                 <p className="text-[12px]">Browse <span className="flex font-semibold text-[14px] leading-3 mr-[1.5rem]">Categories <IoMdArrowDropdown className="inline " /> </span></p>

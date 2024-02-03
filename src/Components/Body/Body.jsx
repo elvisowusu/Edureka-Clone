@@ -1,5 +1,6 @@
-import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import Carousel from "./Carousel";
+
+// import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 function Body() {
     const slides =["https://d24vv731hdkcnd.cloudfront.net/carousel-banner/1706687183-Web-banner_1920x410.jpg","https://d24vv731hdkcnd.cloudfront.net/carousel-banner/1694011067-Current-Home-Page-Banner_1920x410.jpg"]
 
@@ -10,10 +11,10 @@ function Body() {
             <SlArrowRight className="slider"/>
            </section>  */}
            <section className="max-w-lg">
-                <Carousel>
-                    {slides.map((items)=>{
-                        <img src={items} alt="" />
-                    })}
+               <Carousel>
+                     {slides.map((slide, index) => (
+                            <img key={index} src={slide} alt="" />
+                     ))}
                 </Carousel>
            </section>
         </div>
