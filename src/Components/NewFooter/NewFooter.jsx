@@ -1,7 +1,11 @@
-import AfterNav from "./AfterNav";
-import BeforeNav from "./BeforeNav";
-import Navbar from "./Navbar";
-import { useEffect, useReducer} from "react";
+
+import React,{ useEffect, useReducer} from "react";
+import NewBeforeNav from "./newBeforeNav";
+import NewNavbar from "./newNavbar";
+import NewAfterNav from "./newAfterNav";
+
+export const UserFooterContext = React.createContext()
+
 
 const reducer=(state,action)=>{
     switch(action.type){
@@ -16,7 +20,8 @@ const reducer=(state,action)=>{
     }
 }
 
-function Footer() {
+
+function NewFooter() {
 
    const [state, dispatch]=useReducer(reducer,{clickClose:true,screenWidth:window.innerWidth,grabOffer:false})
    useEffect(() => {
@@ -28,18 +33,25 @@ function Footer() {
         window.removeEventListener('resize',handleresize)
     };
    }, [state.screenWidth])
+
    const handleClickClose=()=>{
     dispatch({type:'CLOSE'})
-    console.log(state.clickClose)
    }
-
+   const content ={
+    closeFunction:handleClickClose,
+    closeState:state.clickClose,
+    screenFunction:useEffect,
+    screenState:state.screenWidth,
+   }
     return (
         <div className="text-[14px]">
-            {state.clickClose && <BeforeNav clickClose={state.clickClose} handleClickClose={handleClickClose}/>}
-            <Navbar clickClose={state.clickClose} handleClickClose={handleClickClose} />
-            <AfterNav screenWidth={state.screenWidth} handleresize={useEffect}/> 
+            <UserFooterContext.Provider value={content}>
+              {state.clickClose && <NewBeforeNav/>}
+              <NewNavbar/>
+              <NewAfterNav/>
+            </UserFooterContext.Provider>
         </div>
     );
 }
 
-export default Footer;
+export default NewFooter;

@@ -1,11 +1,13 @@
 import { MdClose } from "react-icons/md";
-import { useState } from "react";
-import GrabOffer from './GrabOffer'
+import React,{ useState, useContext } from "react";
+import NewGrabOffer from "./NewGrabOffer";
+import { UserFooterContext } from "./newFooter";
+
+export const UserGrabOfferContext=React.createContext()
 
 
-
-function BeforeNav({ clickClose, handleClickClose}) {
- const [grabOffer, setGrabOffer] = useState(false);
+function NewBeforeNav() {
+  const [grabOffer, setGrabOffer] = useState(false);
   // Timer array with placeholders for day, hour, minute, and second
   const Timer = [
     { dayTime: "00", name: "D " },
@@ -18,12 +20,24 @@ function BeforeNav({ clickClose, handleClickClose}) {
     setGrabOffer(!grabOffer);
   };
 
+  const grabContent={
+    grabFunction:handleGrabOffer,
+    grabState:grabOffer
+  }
+
+  const close = useContext(UserFooterContext);
+
   return (
     <>
-    {grabOffer && <GrabOffer grabOffer={grabOffer} handleGrabOffer={handleGrabOffer}/>}
-      {clickClose ? (
+    {grabOffer && 
+    <UserGrabOfferContext.Provider value={grabContent}>
+      <NewGrabOffer/>
+    </UserGrabOfferContext.Provider>
+    }
+
+      {close.closeState && (
         <div className="relative flex flex-col justify-center items-center">
-          <button onClick={handleClickClose} className="absolute right-3 top-1">
+          <button onClick={close.closeFunction} className="absolute right-3 top-1">
             <MdClose className="h-[1rem] w-[1rem]"/>
           </button>
           <section>Makar Sankranti Offer</section>
@@ -38,9 +52,9 @@ function BeforeNav({ clickClose, handleClickClose}) {
             <button className="underline" onClick={handleGrabOffer}>GRAB NOW</button>
           </section>
         </div>
-      ):null}
+      )}
     </>
   );
 }
 
-export default BeforeNav;
+export default NewBeforeNav;
