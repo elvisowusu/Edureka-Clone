@@ -1,12 +1,22 @@
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 function Carousel({children: slides}) {
+
+    const [current, setCurrent] = useState(0)
+    const length = slides.length
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1)
+    }
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1)
+    }
+
     return (
         <div className="relative mt-[0.5rem]">
            <div className="flex overflow-hidden min-h-[480px]">{slides}</div> 
            <section className="absolute top-[50%] flex justify-between w-full px-[1rem]">
-            <SlArrowLeft className="slider"/>
-            <SlArrowRight className="slider"/>
+            <button><SlArrowLeft className="slider"/></button>
+            <button><SlArrowRight className="slider"/></button>
            </section>
         </div>
     );
