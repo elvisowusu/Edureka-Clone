@@ -36,8 +36,8 @@ function NewBeforeNav() {
     }
 
       {close.closeState && (
-        <div className="relative flex flex-col justify-center items-center text-center bg-BeforeNavBg text-white text-[0.9rem]">
-          <button onClick={close.closeFunction} className="absolute right-3 top-1">
+        <div className="relative flex flex-col justify-center items-center text-center bg-BeforeNavBg text-white text-[0.9rem] py-[0.6rem]">
+          <button onClick={close.closeFunction} className="absolute right-3 top-3">
             <MdClose className="h-[1rem] w-[1rem]"/>
           </button>
           <section className="flex flex-col items-center">
@@ -46,7 +46,7 @@ function NewBeforeNav() {
             <span>Course Free</span>
           </section>
           <section className="relative w-full"><span className="absolute left-[1rem]">|</span> OFFER ENDING IN : </section>
-          <section className="flex items-center gap-[1.2rem] h-[2.5rem]">
+          <section className="flex items-center gap-[1.2rem]">
             {Timer.map((items, key) => (
               <p key={key}><span className="bg-[#ec9704] px-[5px] py-[2px]">{items.dayTime}</span> <span>{items.name}</span> </p>
             ))}
