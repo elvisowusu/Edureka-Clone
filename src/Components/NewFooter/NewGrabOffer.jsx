@@ -10,7 +10,7 @@ function NewGrabOffer() {
                  ]
     const GrabOffer = useContext(UserGrabOfferContext)
     return (
-        <div className="absolute w-full z-10">
+        <div className="absolute w-full h-full z-10 bg-white">
             <section className="relative p-[1.1rem] bg-OfferHeading rounded-l-md pb-[2.5rem] mb-[1.6rem]">
                 <button className="absolute right-2 top-2" onClick={GrabOffer.grabFunction}><AiOutlineClose /> </button>
                 <section className="border border-dashed rounded-sm p-[1rem] text-white text-[1.25rem] bg-slate-50 bg-opacity-15 ">
