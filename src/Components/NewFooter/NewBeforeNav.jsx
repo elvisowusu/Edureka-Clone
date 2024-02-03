@@ -36,20 +36,21 @@ function NewBeforeNav() {
     }
 
       {close.closeState && (
-        <div className="relative flex flex-col justify-center items-center">
+        <div className="relative flex flex-col justify-center items-center text-center bg-BeforeNavBg text-white text-[0.9rem]">
           <button onClick={close.closeFunction} className="absolute right-3 top-1">
             <MdClose className="h-[1rem] w-[1rem]"/>
           </button>
-          <section>Makar Sankranti Offer</section>
-          <section>- Flat 10% Off + 20% Cashback + Self Paced</section>
-
-          <section>Course Free</section>
-          <section><span>|</span> OFFER ENDING IN : </section>
-          <section>
+          <section className="flex flex-col items-center">
+            <span>Makar Sankranti Offer</span>
+            <span>- Flat 10% Off + 20% Cashback + Self Paced</span>
+            <span>Course Free</span>
+          </section>
+          <section className="relative w-full"><span className="absolute left-[1rem]">|</span> OFFER ENDING IN : </section>
+          <section className="flex items-center gap-[1.2rem] h-[2.5rem]">
             {Timer.map((items, key) => (
-              <span key={key}>{items.dayTime} {items.name} </span>
+              <p key={key}><span className="bg-[#ec9704] px-[5px] py-[2px]">{items.dayTime}</span> <span>{items.name}</span> </p>
             ))}
-            <button className="underline" onClick={handleGrabOffer}>GRAB NOW</button>
+            <button className="underline font-semibold underline-offset-4" onClick={handleGrabOffer}>GRAB NOW</button>
           </section>
         </div>
       )}
