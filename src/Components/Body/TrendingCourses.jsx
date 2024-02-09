@@ -26,17 +26,17 @@ function TrendingCourses() {
 
     const handleView =()=>{setView(!view)}
     return (
-        <section className="relative mt-[5rem] px-[1rem] bg-[#e7e7e7]">
+        <section className="relative mt-[5rem] px-[1rem] bg-[#F9F9F9]">
              <h1 className="my-[15px] text-[#404040] text-[1rem] font-semibold">Trending Courses</h1>
              <section className="relative flex justify-between items-center">
                 <h1 className="text-[#777] text-[14px]">All</h1>
                 <button onClick={handleView} className="border rounded-md border-[#ddd] px-[10px] py-[9px]"><VscMenu size={20} className="text-[#888]"/></button>
-                <section className="absolute top-[2.45rem] bg-white shadow-xl w-full text-[17px]  font-medium text-[#757575] h-[16rem] overflow-y-scroll">
+                {view && <section className="absolute top-[2.45rem] bg-white shadow-xl w-full text-[17px]  font-medium text-[#757575] h-[16rem] overflow-y-scroll">
                     <button onClick={handleView} className="font-semibold text-[18px] text-[#404040] w-full text-left border-b-[5px] border-[#0f4e91] px-[15px]">All</button>
                     {content.map((content,id)=>{
                         return <ul key={id}><li className="px-[15px] py-[3px]"><a href={content.link} className="" >{content.Name}</a></li></ul>
                     })}
-                </section>
+                </section>}
              </section>
         </section>
     );

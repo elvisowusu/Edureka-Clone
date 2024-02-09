@@ -17,7 +17,7 @@ export default {
       },
       backgroundColor:{
         'BeforeNavBg':'rgb(254, 161, 1)'
-      }
+      },
     },
   },
   plugins: [],
