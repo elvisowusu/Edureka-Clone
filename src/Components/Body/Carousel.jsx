@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
-function Carousel({children: slides}) {
-
+function Carousel() {
+    const slides =["https://d24vv731hdkcnd.cloudfront.net/carousel-banner/1706687183-Web-banner_1920x410.jpg","https://d24vv731hdkcnd.cloudfront.net/carousel-banner/1694011067-Current-Home-Page-Banner_1920x410.jpg"]
     const [current, setCurrent] = useState(0)
     const length = slides.length
     const nextSlide = () => {
@@ -14,7 +14,11 @@ function Carousel({children: slides}) {
 
     return (
         <div className="relative mt-[0.5rem]">
-           <div className="flex overflow-hidden min-h-[480px] transition-transform ease-out duration-500" style={{transform:`translateX(-${current*100}%)`}}>{slides}</div> 
+           <div className="" >
+                <a href="http://">
+                    <img className="min-h-[480px] transition-transform ease-out duration-500" src={slides[current]} alt="" />
+                </a>
+            </div> 
            <section className="absolute top-[50%] flex justify-between w-full px-[1rem]">
             <button onClick={prevSlide}><SlArrowLeft className="slider"/></button>
             <button onClick={nextSlide}><SlArrowRight className="slider"/></button>
