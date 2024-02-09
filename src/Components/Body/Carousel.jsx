@@ -24,7 +24,7 @@ function Carousel() {
             <button onClick={prevSlide}><SlArrowLeft className="slider"/></button>
             <button onClick={nextSlide}><SlArrowRight className="slider"/></button>
            </section>
-           <p className="absolute bottom-[5rem] text-sm gap-[1rem] w-full flex justify-center text-[#dddada] opacity-[0.9]"> <GoDotFill className={`${current===0? 'text-white':''}`}/><GoDotFill className={`${current===1? 'text-white':''}`}/></p>
+           <p className="absolute bottom-[5rem] text-sm gap-[1rem] w-full flex justify-center text-[#dddada] opacity-[0.9]"> <GoDotFill className={`${current===0? 'text-white':''}`} onClick={prevSlide}/><GoDotFill className={`${current===1? 'text-white':''}`} onClick={nextSlide}/></p>
         </div>
     );
 }

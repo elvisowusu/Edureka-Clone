@@ -1,15 +1,12 @@
 import Carousel from "./Carousel";
+import Courses from "./Courses";
+import TrendingCourses from "./TrendingCourses";
 function Body() {
     return (
-        <section className="relative">
+        <section className="relative bg-[#F9F9F9]">
                <Carousel/>
-           <section>
-             <h1 className="">Trending Courses</h1>
-             <section className="flex justify-between px-[1rem]">
-                <h1 className="">All</h1>
-                <button>Menu</button>
-             </section>
-           </section>
+               <Courses/>
+               <TrendingCourses/>
         </section>
     );
 }
