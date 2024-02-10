@@ -17,7 +17,7 @@ function Carousel() {
         <div className="relative mt-[0.5rem]">
            <div className="" >
                 <a href="http://">
-                    <img className="min-h-[480px] transition-transform ease-out duration-500" src={slides[current]} alt="" />
+                    <img className="min-h-[480px] transition-transform ease-out duration-500 object-cover " src={slides[current]} alt="" />
                 </a>
             </div> 
            <section className="absolute top-[50%] flex justify-between w-full px-[1rem]">
