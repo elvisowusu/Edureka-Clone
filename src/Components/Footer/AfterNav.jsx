@@ -1,7 +1,7 @@
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMenuOutline } from "react-icons/io5";
 
-function AfterNav({screenWidth}) {
+function AfterNav({screenfWidth}) {
     const Courses = [
                         {name:"Cloud Computing", link:""},
                         {name:"DevOps",link:""},
