@@ -45,9 +45,9 @@ function TrendingCoursesSlider() {
                     {courseName:'Docker Certification Training Course',bgGradient:"bg-pink",img:<FaDocker className="text-pink-400 bg-white rounded-full p-2"/>,number:"",stars:""},
                     {courseName:'MySQL DBA Certification Training',bgGradient:"bg-pink",img:<DiMysql className="text-pink-400 rounded-full p-2 bg-white"/>,number:"",stars:""},]
     return (
-        <section className="w-[356px]">
+        <section className="w-[356px] px-[1.5rem] grid gap-[1rem]">
             {content.map((items,key)=>{
-                return <section key={key} className="flex ">
+                return <section key={key} className="flex">
                 <div className={`${items.bgGradient} text-[50px] h-[100px] w-[93px] min-w-[93px] flex items-center justify-center`}>
                     {items.img}
                 </div>
