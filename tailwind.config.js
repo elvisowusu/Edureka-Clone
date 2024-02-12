@@ -19,6 +19,9 @@ export default {
       backgroundColor:{
         'BeforeNavBg':'rgb(254, 161, 1)'
       },
+      textColor:{
+        pinkText:"linear-gradient(242deg, #f49cae, #b05ce2)",
+      }
     },
   },
   plugins: [],
