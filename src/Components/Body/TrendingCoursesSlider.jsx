@@ -19,7 +19,7 @@ import { GrCertificate } from "react-icons/gr";
 import { SiPowerbi } from "react-icons/si";
 import { SiAmazonaws } from "react-icons/si";
 import { PiInfinityDuotone } from "react-icons/pi";
-import { FaRegStar,FaStar } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa6";
 
 function TrendingCoursesSlider() {
     const content =[{courseName:'DevOps Certification Training Course',bgGradient:"bg-[linear-gradient(240deg,#4fcdce,#975ae0)]",img:<PiInfinityDuotone className="bg-white rounded-full text-blue-400 p-2"/>,number:"",stars:""},
