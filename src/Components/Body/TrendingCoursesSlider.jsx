@@ -21,7 +21,7 @@ import { PiInfinityDuotone } from "react-icons/pi";
 
 function TrendingCoursesSlider() {
     const content =[{courseName:'DevOps Certification Training Course',bgGradient:"bg-[linear-gradient(240deg,#4fcdce,#975ae0)]",img:<PiInfinityDuotone className="bg-white rounded-full text-blue-400 p-2"/>,number:"",stars:""},
-                    {courseName:'AWS Certification Training Course',bgGradient:"bg-pink",img:<SiAmazonaws className="text-white"/>,number:"",stars:""},
+                    {courseName:'AWS Certification Training Course for Solutions',bgGradient:"bg-pink",img:<SiAmazonaws className="text-white"/>,number:"",stars:""},
                     {courseName:'ChatGPT Complete Course: Beginings to Advance',bgGradient:"bg-pink",img:<GiOpenBook className="text-white"/>,number:"",stars:""},
                     {courseName:'Microsoft Power BI Certification Training Course',bgGradient:"bg-pink",img:<SiPowerbi className="bg-white text-pink-400 p-2 rounded-md"/>,number:"",stars:""},
                     {courseName:'PMP Certification Training Course',bgGradient:"bg-[linear-gradient(240deg,#e59f39,#d475c5)]",img:<GrCertificate className="text-white"/>,number:"",stars:""},
@@ -45,13 +45,13 @@ function TrendingCoursesSlider() {
                     {courseName:'Docker Certification Training Course',bgGradient:"bg-pink",img:<FaDocker className="text-pink-400 bg-white rounded-full p-2"/>,number:"",stars:""},
                     {courseName:'MySQL DBA Certification Training',bgGradient:"bg-pink",img:<DiMysql className="text-pink-400 rounded-full p-2 bg-white"/>,number:"",stars:""},]
     return (
-        <section>
+        <section className="w-[356px]">
             {content.map((items,key)=>{
                 return <section key={key} className="flex ">
                 <div className={`${items.bgGradient} text-[50px] h-[100px] w-[93px] min-w-[93px] flex items-center justify-center`}>
                     {items.img}
                 </div>
-                <div>
+                <div className="px-[10px] py-[11px] flex flex-col justify-between">
                     <h1>{items.courseName}</h1>
                     <p>Stars <span>4.5</span><span>(65250)</span></p>
                 </div>
