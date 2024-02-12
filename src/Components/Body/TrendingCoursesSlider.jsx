@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { SiAzuredevops } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
 import { SiKubernetes } from "react-icons/si";
@@ -18,6 +19,7 @@ import { GrCertificate } from "react-icons/gr";
 import { SiPowerbi } from "react-icons/si";
 import { SiAmazonaws } from "react-icons/si";
 import { PiInfinityDuotone } from "react-icons/pi";
+import { FaRegStar,FaStar } from "react-icons/fa6";
 
 function TrendingCoursesSlider() {
     const content =[{courseName:'DevOps Certification Training Course',bgGradient:"bg-[linear-gradient(240deg,#4fcdce,#975ae0)]",img:<PiInfinityDuotone className="bg-white rounded-full text-blue-400 p-2"/>,number:"",stars:""},
@@ -43,7 +45,21 @@ function TrendingCoursesSlider() {
                     {courseName:'Blockchain Developer Certification Course',bgGradient:"bg-[linear-gradient(240deg,#bdd377,#09adef)]",img:<GiOpenBook className="text-white"/>,number:"",stars:""},
                     {courseName:'Kubernetes Certification Training Course',bgGradient:"bg-[linear-gradient(240deg,#46dbea,#507fd9)]",img:<SiKubernetes className="text-white"/>,number:"",stars:""},
                     {courseName:'Docker Certification Training Course',bgGradient:"bg-pink",img:<FaDocker className="text-pink-400 bg-white rounded-full p-2"/>,number:"",stars:""},
-                    {courseName:'MySQL DBA Certification Training',bgGradient:"bg-pink",img:<DiMysql className="text-pink-400 rounded-full p-2 bg-white"/>,number:"",stars:""},]
+                    {courseName:'MySQL DBA Certification Training',bgGradient:"bg-pink",img:<DiMysql className="text-pink-400 rounded-full p-2 bg-white"/>,number:"",stars:""},
+    ]
+
+    // State to manage ratings for each course
+    const [ratings, setRatings] = useState(new Array(content.length).fill(0));
+    // Function to handle rating click event
+    const handleRatingClick = (index, rating) => {
+        // Clone the existing ratings array
+        const newRatings = [...ratings];
+        // Update the rating for the clicked course
+        newRatings[index] = rating;
+        // Update the state with new ratings
+        setRatings(newRatings);
+      };
+    
     return (
         <section className="w-[356px] px-[1.5rem] grid gap-[1rem]">
             {content.map((items,key)=>{
@@ -53,7 +69,20 @@ function TrendingCoursesSlider() {
                 </div>
                 <div className="px-[10px] py-[11px] flex flex-col justify-between">
                     <h1>{items.courseName}</h1>
-                    <p>Stars <span>4.5</span><span>(65250)</span></p>
+                    <div className="">
+                    {[...Array(5)].map((_, starIndex) => (
+                  <span
+                    key={starIndex}
+                    onClick={() => handleRatingClick(key, starIndex + 1)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    {/* Render filled star if starIndex is less than the current rating, otherwise render outline star */}
+                    {starIndex < ratings[key] ? <FaStar className="inline" /> : <FaRegStar className="inline" />}
+                  </span>
+                ))}
+                {/* Display the number of ratings */}
+                <span className="bg">({ratings[key]})</span>
+                    </div>
                 </div>
             </section>
             })}
