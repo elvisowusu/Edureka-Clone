@@ -77,7 +77,7 @@ function TrendingCoursesSlider() {
                     style={{ cursor: 'pointer' }}
                   >
                     {/* Render filled star if starIndex is less than the current rating, otherwise render outline star */}
-                    {starIndex < ratings[key] ? <FaStar className="inline" /> : <FaRegStar className="inline" />}
+                    {starIndex < ratings[key] ? <FaStar className="inline text-[#ffc700]" /> : <FaStar className="inline text-[#f0f0f0]" />}
                   </span>
                 ))}
                 {/* Display the number of ratings */}
