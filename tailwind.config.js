@@ -14,6 +14,7 @@ export default {
         'OfferHeading':'linear-gradient(to right,#0072d2,#00b6c3)',
         'OfferTimer':'linear-gradient(to left,#bdd377,#09adef)',
         'NavBg':'linear-gradient(to left,#248de4,#0c5397)',
+        'pink':'linear-gradient(242deg, #f49cae, #b05ce2)'
       },
       backgroundColor:{
         'BeforeNavBg':'rgb(254, 161, 1)'

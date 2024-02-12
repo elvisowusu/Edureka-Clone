@@ -8,7 +8,7 @@ function GrabOffer({handleGrabOffer}) {
                  ]
 
     return (
-        <div className="absolute w-full z-10">
+        <div className="w-full z-10 fixed">
             <section className="relative p-[1.1rem] bg-OfferHeading rounded-l-md pb-[2.5rem] mb-[1.6rem]">
                 <button className="absolute right-2 top-2" onClick={handleGrabOffer}><AiOutlineClose /> </button>
                 <section className="border border-dashed rounded-sm p-[1rem] text-white text-[1.25rem] bg-slate-50 bg-opacity-15 ">
