@@ -15,9 +15,11 @@ function NewBeforeNav() {
     { dayTime: "00", name: "M " },
     { dayTime: "00", name: "S " },
   ];
-
+  
+  const close = useContext(UserFooterContext);
   const handleGrabOffer = () => {
     setGrabOffer(!grabOffer);
+    close.scroll;
   };
 
   const grabContent={
@@ -25,7 +27,6 @@ function NewBeforeNav() {
     grabState:grabOffer
   }
 
-  const close = useContext(UserFooterContext);
 
   return (
     <>

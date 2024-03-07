@@ -15,6 +15,8 @@ const reducer=(state,action)=>{
             return {...state,screenWidth:window.innerWidth}
         case 'GRABOFFER':
             return {...state,grabOffer:!state.grapOffer}
+        case 'SCROLL':
+            return {...state,scrolled:!state.scrolled}
         default:
             return state
     }
@@ -23,7 +25,7 @@ const reducer=(state,action)=>{
 
 function NewFooter() {
 
-   const [state, dispatch]=useReducer(reducer,{clickClose:true,screenWidth:window.innerWidth,grabOffer:false})
+   const [state, dispatch]=useReducer(reducer,{clickClose:true,screenWidth:window.innerWidth,grabOffer:false,scrolled:false})
    useEffect(() => {
     const handleresize=()=>{
         dispatch({type:'SCREENRESIZE'});
@@ -42,6 +44,7 @@ function NewFooter() {
     closeState:state.clickClose,
     screenFunction:useEffect,
     screenState:state.screenWidth,
+    scrolled:state.scrolled
    }
     return (
         <div className="text-[14px]">

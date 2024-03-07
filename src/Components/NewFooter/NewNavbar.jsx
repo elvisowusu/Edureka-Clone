@@ -19,7 +19,7 @@ function NewNavbar() {
     , [scroll]);    
 
     return (
-        <div>
+        <div >
             <div className={`bg-NavBg px-[1rem] pt-[1rem] pb-[0.6rem] w-full ${scroll>50 ?'fixed top-0 flex gap-4 z-20 pb-[0.7rem]':''}`}>
                 <section className="flex justify-between pb-[0.2rem]">
                     <section className="flex items-center">

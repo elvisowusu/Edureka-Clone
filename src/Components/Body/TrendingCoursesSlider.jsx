@@ -20,6 +20,7 @@ import { SiPowerbi } from "react-icons/si";
 import { SiAmazonaws } from "react-icons/si";
 import { PiInfinityDuotone } from "react-icons/pi";
 import { FaStar } from "react-icons/fa6";
+import PurdueImage from "./../../assets/Purdue.png"
 
 function TrendingCoursesSlider() {
     const content =[{courseName:'DevOps Certification Training Course',bgGradient:"bg-[linear-gradient(240deg,#4fcdce,#975ae0)]",img:<PiInfinityDuotone className="bg-white rounded-full text-blue-400 p-2"/>,number:"",stars:""},
@@ -62,6 +63,20 @@ function TrendingCoursesSlider() {
     
     return (
         <section className="w-[356px] px-[1.5rem] grid gap-[1rem]">
+          <div className='flex'>
+            <div className={`bg-[url(https://d1jnx9ba8s6j9r.cloudfront.net/img/pcpdevops_m.jpg)] text-[50px] h-[166px] w-[93px] min-w-[93px] flex items-center justify-center`}>
+                  <img src={PurdueImage} alt="purgueImg" width={49} height={39} className='rounded-md'/>  
+            </div>
+            <div className="px-[10px]  md:py-[11px] flex flex-col justify-between w-full">
+                  <h1 className={'text-[13px]'}>Post Graduate Program In Devops</h1>
+                  <ul className='list-item list-disc text-[10px] text-[#192f60]'>
+                    <li>Curriculum Curated in collaboration with Purdue University</li>
+                    <li>Access Alumni network</li>
+                    <li>Placement Assistance</li>
+                  </ul> 
+                  <button className='border w-full rounded-md'>VIEW MORE</button>
+            </div>
+          </div>
             {content.map((items,key)=>{
                 return <section key={key} className="flex">
                 <div className={`${items.bgGradient} text-[50px] h-[100px] w-[93px] min-w-[93px] flex items-center justify-center`}>
