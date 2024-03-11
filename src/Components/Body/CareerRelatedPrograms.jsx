@@ -38,9 +38,9 @@ function CareerRelatedPrograms() {
       };
     return (
         <div>
-            <section>
-                <button>Browse All Courses</button>
-                <p>Expore our wide range of courses</p>
+            <section className='w-full flex flex-col items-center'>
+                <button className='bg-[linear-gradient(98deg,#248de4,#243be4)] my-[10px] py-[6px] px-[27px] font-semibold text-white rounded-sm'>Browse All Courses</button>
+                <p className='italic text-[14px] text-[#4a4a4a] tracking-wider tra'>Expore our wide range of courses</p>
             </section>
             <section>
                 <h1>Career Related Programs</h1>
