@@ -62,7 +62,7 @@ function TrendingCoursesSlider() {
       };
     
     return (
-        <section className="w-[356px] px-[1.5rem] grid gap-[1rem]">
+        <section className="px-[1.5rem]">
           <div className='flex'>
             <div className={`bg-[url(https://d1jnx9ba8s6j9r.cloudfront.net/img/pcpdevops_m.jpg)] text-[50px] h-[166px] w-[93px] min-w-[93px] flex items-center justify-center`}>
                   <img src={PurdueImage} alt="purgueImg" width={49} height={39} className='rounded-md'/>  
@@ -78,13 +78,13 @@ function TrendingCoursesSlider() {
             </div>
           </div>
             {content.map((items,key)=>{
-                return <section key={key} className="flex">
+                return <section key={key} className="flex my-[1.3rem]">
                 <div className={`${items.bgGradient} text-[50px] h-[100px] w-[93px] min-w-[93px] flex items-center justify-center`}>
                     {items.img}
                 </div>
                 <div className="px-[10px] py-[11px] flex flex-col justify-between">
                     <h1>{items.courseName}</h1>
-                    <div className="">
+                <div className="flex items-center gap-[0.2rem]">
                     {[...Array(5)].map((_, starIndex) => (
                   <span
                     key={starIndex}
@@ -94,10 +94,10 @@ function TrendingCoursesSlider() {
                     {/* Render filled star if starIndex is less than the current rating, otherwise render outline star */}
                     {starIndex < ratings[key] ? <FaStar className="inline text-[#ffc700]" /> : <FaStar className="inline text-[#f0f0f0]" />}
                   </span>
-                ))}
-                {/* Display the number of ratings */}
-                <span className="bg">({ratings[key]})</span>
-                    </div>
+                  ))}
+                  {/* Display the number of ratings */}
+                  <span className="font-semibold pt-1 pl-1">{ratings[key]}</span>
+                </div>
                 </div>
             </section>
             })}

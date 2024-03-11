@@ -37,21 +37,21 @@ function CareerRelatedPrograms() {
         setRatings(newRatings);
       };
     return (
-        <div>
-            <section className='w-full flex flex-col items-center'>
+        <div >
+            <section className='w-full flex flex-col items-center my-[2rem]'>
                 <button className='bg-[linear-gradient(98deg,#248de4,#243be4)] my-[10px] py-[6px] px-[27px] font-semibold text-white rounded-sm'>Browse All Courses</button>
-                <p className='italic text-[14px] text-[#4a4a4a] tracking-wider tra'>Expore our wide range of courses</p>
+                <p className='italic text-[14px] text-[#4a4a4a] tracking-wider'>Expore our wide range of courses</p>
             </section>
-            <section>
-                <h1>Career Related Programs</h1>
+                <h1 className='px-[0.6rem] my-[1.5rem] text-[#404040] font-semibold'>Career Related Programs</h1>
+            <section className="px-[1.5rem]">
                 {content.map((items,key)=>{
-                return <section key={key} className="flex">
+                return <section key={key} className="flex my-[1.3rem]">
                 <div className={`${items.bgGradient} text-[50px] h-[100px] w-[93px] min-w-[93px] flex items-center justify-center`}>
                     {items.img}
                 </div>
                 <div className="px-[10px] py-[11px] flex flex-col justify-between">
                     <h1>{items.courseName}</h1>
-                    <div className="">
+                    <div className="flex items-center gap-[0.2rem]">
                     {[...Array(5)].map((_, starIndex) => (
                   <span
                     key={starIndex}
@@ -63,7 +63,7 @@ function CareerRelatedPrograms() {
                   </span>
                 ))}
                 {/* Display the number of ratings */}
-                <span className="bg">({ratings[key]})</span>
+                <span className="font-semibold pt-1 pl-1">{ratings[key]}</span>
                     </div>
                 </div>
             </section>
