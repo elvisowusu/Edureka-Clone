@@ -1,3 +1,4 @@
+import CareerRelatedPrograms from "./CareerRelatedPrograms";
 import Carousel from "./Carousel";
 import Courses from "./Courses";
 import TrendingCourses from "./TrendingCourses";
@@ -9,6 +10,7 @@ function Body() {
                <Courses/>
                <TrendingCourses/>
                <TrendingCoursesSlider/>
+               <CareerRelatedPrograms/>
         </section>
     );
 }

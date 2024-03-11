@@ -1,49 +1,41 @@
+import { useState } from 'react';
 import { GiOpenBook } from "react-icons/gi";
 import { PiCertificateDuotone } from "react-icons/pi";
-import { useState } from 'react';
-import { SiAzuredevops } from "react-icons/si";
+import { GiBrain } from "react-icons/gi";
 import { FaDocker } from "react-icons/fa";
-import { SiKubernetes } from "react-icons/si";
-import { DiMysql } from "react-icons/di";
-import { BsFillMegaphoneFill } from "react-icons/bs";
-import { DiScrum } from "react-icons/di";
-import { SiMicrosoftazure } from "react-icons/si";
-import { FaPython } from "react-icons/fa";
-import { SiOpensourcehardware } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
-import { FaMicrochip } from "react-icons/fa6";
-import { FaSalesforce } from "react-icons/fa";
-import { IoLogoTableau } from "react-icons/io5";
-import { SiSelenium } from "react-icons/si";
-import { SiCyberdefenders } from "react-icons/si";
-import { GrCertificate } from "react-icons/gr";
-import { SiPowerbi } from "react-icons/si";
-import { SiAmazonaws } from "react-icons/si";
-import { PiInfinityDuotone } from "react-icons/pi";
 import { FaStar } from "react-icons/fa6";
 function CareerRelatedPrograms() {
     const content =[{courseName:'DevOps Engineer Masters Program',bgGradient:"bg-pink",img:<GiOpenBook className="text-white"/>,number:"",stars:""},
                     {courseName:'Data Engineering Certification Courses (Masters Program)',bgGradient:"bg-pink",img:<FaDocker className="text-pink-400 bg-white rounded-full p-2"/>,number:"",stars:""},
                     {courseName:'Cyber Security Masters Program',bgGradient:"bg-pink",img:'',number:"",stars:""},
                     {courseName:'Business Analyst Masters Course',bgGradient:"bg-[linear-gradient(240deg,#bdd377,#09adef)]",img:<GiOpenBook className="text-white"/>,number:"",stars:""},
-                    {courseName:'Microsoft Azure Cloud Master Training',bgGradient:"bg-[linear-gradient(240deg, #426a9f, #4edbec)]",img:<PiCertificateDuotone className="text-white"/>,number:"",stars:""},
+                    {courseName:'Microsoft Azure Cloud Master Training',bgGradient:"bg-[linear-gradient(240deg,#426a9f,#4edbec)]",img:<PiCertificateDuotone className="text-blue-400 bg-white rounded-md p-2"/>,number:"",stars:""},
                     {courseName:'Salesforce Architect Masters Course',bgGradient:"bg-pink",img:<GiOpenBook className="text-white"/>,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
-                    // {courseName:,bgGradient:,img:,number:"",stars:""},
+                    {courseName:'Generative AI Course: Masters Program',bgGradient:"bg-pink",img:'',number:"",stars:""},
+                    {courseName:'Automation Testing Engineer Course For Master',bgGradient:"bg-pink",img:<PiCertificateDuotone className="text-pink-400 bg-white rounded-md p-2"/>,number:"",stars:""},
+                    {courseName:'AI and Machine Learning Masters Course',bgGradient:"bg-pink",img:<GiBrain className='text-white'/>,number:"",stars:""},
+                    {courseName:'Full Stack Web Developer Masters Program Course',bgGradient:"bg-[linear-gradient(240deg,#e0ec51,#2eb18d)]",img:<PiCertificateDuotone className='text-green-400 bg-white rounded-md p-2'/>,number:"",stars:""},
+                    {courseName:'Data Science Traning Masters Program',bgGradient:"bg-pink",img:<PiCertificateDuotone className='text-pink-400 bg-white rounded-md p-2'/>,number:"",stars:""},
+                    {courseName:'Project Management Masters Program',bgGradient:"bg-[linear-gradient(240deg,#80d0c7,#166a9b)]",img:<GiOpenBook className='text-white'/>,number:"",stars:""},
+                    {courseName:'Python Developer Masters Program',bgGradient:"bg-pink",img:<PiCertificateDuotone className='text-pink-400 bg-white rounded-md p-2'/>,number:"",stars:""},
+                    {courseName:'Big Data Architect Masters Program',bgGradient:"bg-[linear-gradient(240deg,#70bc55,#ea6f6f)]",img:<PiCertificateDuotone className='text-green-400 bg-white rounded-md p-2'/>,number:"",stars:""},
+                    {courseName:'AWS Masters Certification Program',bgGradient:"bg-pink",img:<GiOpenBook className='text-white'/>,number:"",stars:""},
+                    {courseName:'Cloud Architect Course-Masters Program',bgGradient:"bg-[linear-gradient(240deg,#ff6364,#ff88bc)]",img:<PiCertificateDuotone className='text-red-400 bg-white rounded-md p-2'/>,number:"",stars:""},
+                    {courseName:'Data Analytics Masters Program',bgGradient:"bg-pink",img:<PiCertificateDuotone className='text-pink-400 bg-white rounded-md p-2'/>,number:"",stars:""},
+                    {courseName:'Business Intelligence Masters Program',bgGradient:"bg-[linear-gradient(240deg,#426a9f,#4edbec)]",img:<PiCertificateDuotone className='text-blue-400 bg-white rounded-md p-2'/>,number:"",stars:""},
+                    {courseName:'RPA Master Certification Course',bgGradient:"bg-[linear-gradient(240deg,#d66868,#e1a940)]",img:<PiCertificateDuotone className='text-orange-600 bg-white rounded-md p-2'/>,number:"",stars:""},
     ]
+    // State to manage ratings for each course
+    const [ratings, setRatings] = useState(new Array(content.length).fill(0));
+    // Function to handle rating click event
+    const handleRatingClick = (index, rating) => {
+        // Clone the existing ratings array
+        const newRatings = [...ratings];
+        // Update the rating for the clicked course
+        newRatings[index] = rating;
+        // Update the state with new ratings
+        setRatings(newRatings);
+      };
     return (
         <div>
             <section>
