@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="font-openSans">
      {/* <Footer/> */}
-     {/* <NewFooter/>
-     <Body/> */}
+     <NewFooter/>
+     <Body/>
      <NavMenu/>
     </div>
   )
