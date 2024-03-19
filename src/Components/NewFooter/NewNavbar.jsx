@@ -2,8 +2,10 @@ import { IoMenuOutline } from "react-icons/io5";
 import { BiSearch, BiSolidPhone } from "react-icons/bi";
 import { UserFooterContext } from "./newFooter";
 import { useContext,useState,useEffect } from "react";
+import NavMenu from "./NavMenu";
 
 function NewNavbar() {
+    const [showNavMenu,setShowNavMenu]=useState(false);
     const close =useContext(UserFooterContext)
     const [scroll, setScroll] = useState(0);
     useEffect(() => {
@@ -16,14 +18,16 @@ function NewNavbar() {
             window.removeEventListener("scroll", handleScroll);
         };
     }
-    , [scroll]);    
+    , [scroll]); 
 
+    const navMenuFunction=()=>{setShowNavMenu(!showNavMenu)}
     return (
         <div >
+            {showNavMenu && <NavMenu NavMenuState={showNavMenu} NavMunuFunction={navMenuFunction}/>}
             <div className={`bg-NavBg px-[1rem] pt-[1rem] pb-[0.6rem] w-full ${scroll>50 ?'fixed top-0 flex gap-4 z-20 pb-[0.7rem]':''}`}>
                 <section className="flex justify-between pb-[0.2rem]">
                     <section className="flex items-center">
-                        <IoMenuOutline className="w-[1.5rem] h-[1.5rem] mb-2 text-white"/>
+                        <button onClick={navMenuFunction}><IoMenuOutline className="w-[1.5rem] h-[1.5rem] mb-2 text-white"/></button>
                         <img
                             className={`w-[7rem] ${scroll>50 ?'hidden':''}`}
                             src="https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1702561279/img/Edureka_V_W_logo.webp"

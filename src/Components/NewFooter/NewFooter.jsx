@@ -17,8 +17,6 @@ const reducer=(state,action)=>{
             return {...state,grabOffer:!state.grapOffer}
         case 'SCROLL':
             return {...state,scrolled:!state.scrolled}
-        case 'NAVMENU':
-            return {...state,navMenu:!state.navMenu}
         default:
             return state
     }
@@ -27,7 +25,7 @@ const reducer=(state,action)=>{
 
 function NewFooter() {
 
-   const [state, dispatch]=useReducer(reducer,{clickClose:true,screenWidth:window.innerWidth,grabOffer:false,scrolled:false,navMenu:false})
+   const [state, dispatch]=useReducer(reducer,{clickClose:true,screenWidth:window.innerWidth,grabOffer:false,scrolled:false,})
    useEffect(() => {
     const handleresize=()=>{
         dispatch({type:'SCREENRESIZE'});

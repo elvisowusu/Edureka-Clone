@@ -1,5 +1,4 @@
 import Body from "./Components/Body/Body"
-import NavMenu from "./Components/NewFooter/NavMenu"
 import NewFooter from "./Components/NewFooter/newFooter"
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
      {/* <Footer/> */}
      <NewFooter/>
      <Body/>
-     <NavMenu/>
     </div>
   )
 }
