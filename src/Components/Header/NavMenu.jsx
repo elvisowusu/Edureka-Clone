@@ -1,7 +1,6 @@
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 function NavMenu({NavMunuFunction}) {
-    const List=['Categories','Corporate Training','Courses']
     return (
         <div className="fixed top-0 z-50 w-[83%]">
             <section onClick={NavMunuFunction} className="fixed w-full -z-10 h-full opacity-65 bg-[rgba(0,0,0,0.5)]"></section>
