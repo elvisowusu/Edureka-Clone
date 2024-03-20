@@ -1,5 +1,5 @@
 import Body from "./Components/Body/Body"
-import NewFooter from "./Components/NewFooter/newFooter"
+import NewFooter from "./Components/Header/Header"
 
 function App() {
 

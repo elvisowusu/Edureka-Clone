@@ -1,6 +1,6 @@
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMenuOutline } from "react-icons/io5";
-import { UserFooterContext } from "./newFooter";
+import { UserFooterContext } from "./Header";
 import { useContext } from "react";
 function NewAfterNav() {
 

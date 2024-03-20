@@ -1,7 +1,7 @@
 import { MdClose } from "react-icons/md";
 import React,{ useState, useContext } from "react";
 import NewGrabOffer from "./NewGrabOffer";
-import { UserFooterContext } from "./newFooter";
+import { UserFooterContext } from "./Header";
 
 export const UserGrabOfferContext=React.createContext()
 

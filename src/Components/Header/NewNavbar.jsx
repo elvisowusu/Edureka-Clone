@@ -1,6 +1,6 @@
 import { IoMenuOutline } from "react-icons/io5";
 import { BiSearch, BiSolidPhone } from "react-icons/bi";
-import { UserFooterContext } from "./newFooter";
+import { UserFooterContext } from "./Header";
 import { useContext,useState,useEffect } from "react";
 import NavMenu from "./NavMenu";
 
