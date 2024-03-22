@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { IoMdCloudOutline } from "react-icons/io";
+import { IoIosArrowForward, IoMdCloudOutline } from "react-icons/io";
 import { GoInfinity } from "react-icons/go";
 import { GrShieldSecurity, GrDocumentText } from "react-icons/gr";
 import { IoBulbOutline, IoSettingsOutline } from "react-icons/io5";
@@ -51,7 +51,7 @@ function DiscoverTopCategories() {
                     </div>
                 )
             })}
-            <button onClick={viewFunction} className='text-[#0c5397] font-bold text-[12px] mt-[19px]'>VIEW {view?'MORE':'LESS'} </button>
+            <button onClick={viewFunction} className='flex items-center justify-center text-[#0c5397] font-bold text-[12px] mt-[19px] w-[22.7rem]'>VIEW {view?'MORE':'LESS'} <IoIosArrowForward size={18}/> </button>
         </div>
     );
 }
