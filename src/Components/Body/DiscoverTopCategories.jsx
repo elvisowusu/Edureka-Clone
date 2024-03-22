@@ -6,7 +6,7 @@ import { IoBulbOutline, IoSettingsOutline } from "react-icons/io5";
 import { TfiWorld } from "react-icons/tfi";
 import { GiMaterialsScience, GiBrain ,GiAutoRepair } from "react-icons/gi";
 import { PiGraduationCap } from "react-icons/pi";
-import { BsGraphUpArrow, BsDatabase, BsWindowFullscreen, BsArrowBarRight } from "react-icons/bs";
+import { BsGraphUpArrow, BsDatabase, BsWindowFullscreen } from "react-icons/bs";
 import { FaCode } from "react-icons/fa6";
 import { TbRobot } from "react-icons/tb";
 import { CiMobile3 } from "react-icons/ci";
@@ -45,15 +45,13 @@ function DiscoverTopCategories() {
             <h1 className='px-[0.6rem] my-[1.5rem] text-[#404040] font-semibold'>Discover Top Categories</h1>
             {categories.map((categories,index)=>{
                 return(
-                    <div key={index} className=''>
-                        <div className='f'>
+                    <div key={index} className='flex items-center text-[12px] text-[#404040] font-semibold'>
                             {categories.image}
-                            <p className='ml-[0.5rem] text-[#404040] font-semibold'>{categories.Field}</p>
-                        </div>
-                        <button onClick={viewFunction} className='text-[#0c5397] font-bold text-[12px] mt-[19px]'>VIEW {view?'MORE':'LESS'} <BsArrowBarRight/></button>
+                            <p className='ml-[15px]'>{categories.Field}</p>
                     </div>
                 )
             })}
+            <button onClick={viewFunction} className='text-[#0c5397] font-bold text-[12px] mt-[19px]'>VIEW {view?'MORE':'LESS'} </button>
         </div>
     );
 }
