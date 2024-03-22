@@ -14,7 +14,7 @@ import { SiMaterialdesign, SiHiveBlockchain } from "react-icons/si";
 import { HiOutlineMegaphone } from "react-icons/hi2";
 
 function DiscoverTopCategories() {
-    const [view,setView] = useState(false)
+    const [view,setView] = useState(true)
     const categories = [{image:<IoMdCloudOutline size={40} className="text-[#ff8f9d]"/>,Field:'Cloud Computing'},
                         {image:<GoInfinity size={40} className="text-[#6e97ff]"/>,Field:'DevOps'},
                         {image:<GrShieldSecurity size={40} className="text-[#91c653]"/>,Field:'Cyber Security'},
