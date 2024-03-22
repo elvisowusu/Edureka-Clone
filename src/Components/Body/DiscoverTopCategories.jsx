@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import { IoMdCloudOutline } from "react-icons/io";
 import { GoInfinity } from "react-icons/go";
 import { GrShieldSecurity, GrDocumentText } from "react-icons/gr";
@@ -5,7 +6,7 @@ import { IoBulbOutline, IoSettingsOutline } from "react-icons/io5";
 import { TfiWorld } from "react-icons/tfi";
 import { GiMaterialsScience, GiBrain ,GiAutoRepair } from "react-icons/gi";
 import { PiGraduationCap } from "react-icons/pi";
-import { BsGraphUpArrow, BsDatabase, BsWindowFullscreen } from "react-icons/bs";
+import { BsGraphUpArrow, BsDatabase, BsWindowFullscreen, BsArrowBarRight } from "react-icons/bs";
 import { FaCode } from "react-icons/fa6";
 import { TbRobot } from "react-icons/tb";
 import { CiMobile3 } from "react-icons/ci";
@@ -13,6 +14,7 @@ import { SiMaterialdesign, SiHiveBlockchain } from "react-icons/si";
 import { HiOutlineMegaphone } from "react-icons/hi2";
 
 function DiscoverTopCategories() {
+    const [view,setView] = useState(false)
     const categories = [{image:<IoMdCloudOutline className="text-[#ff8f9d]"/>,Field:'Cloud Computing'},
                         {image:<GoInfinity className="text-[#6e97ff]"/>,Field:'DevOps'},
                         {image:<GrShieldSecurity className="text-[#91c653]"/>,Field:'Cyber Security'},
@@ -35,17 +37,20 @@ function DiscoverTopCategories() {
                         {image:<HiOutlineMegaphone className="text-[#ff8f9d]"/>,Field:'Digital Marketing'},
 
                     ]
+        const viewFunction =()=>{
+            setView(!view)
+        }
     return (
         <div>
             <h1 className='px-[0.6rem] my-[1.5rem] text-[#404040] font-semibold'>Discover Top Categories</h1>
             {categories.map((categories,index)=>{
                 return(
-                    <div key={index} className='flex items-center justify-between px-[0.6rem] py-[0.5rem] border-b border-[#e0e0e0]'>
-                        <div className='flex items-center'>
+                    <div key={index} className=''>
+                        <div className='f'>
                             {categories.image}
                             <p className='ml-[0.5rem] text-[#404040] font-semibold'>{categories.Field}</p>
                         </div>
-                        <button className='text-[#0073b1] font-semibold'>View All</button>
+                        <button onClick={viewFunction} className='text-[#0c5397] font-bold text-[12px] mt-[19px]'>VIEW {view?'MORE':'LESS'} <BsArrowBarRight/></button>
                     </div>
                 )
             })}
