@@ -15,37 +15,37 @@ import { HiOutlineMegaphone } from "react-icons/hi2";
 
 function DiscoverTopCategories() {
     const [view,setView] = useState(false)
-    const categories = [{image:<IoMdCloudOutline className="text-[#ff8f9d]"/>,Field:'Cloud Computing'},
-                        {image:<GoInfinity className="text-[#6e97ff]"/>,Field:'DevOps'},
-                        {image:<GrShieldSecurity className="text-[#91c653]"/>,Field:'Cyber Security'},
-                        {image:<IoBulbOutline className="text-[#c891f8]"/>,Field:'BI and Visualization'},
-                        {image:<TfiWorld className="text-[#7bdcfc]"/>,Field:'Programming & Frameworks'},
-                        {image:<GiMaterialsScience className="text-[#fea101]"/>,Field:'Data Science'},
-                        {image:<GrDocumentText className="text-[#ff8f9d]"/>,Field:'Project Management and Methodologies'},
-                        {image:<PiGraduationCap className="text-[#ff8f9d]"/>,Field:'PG Programs'},
-                        {image:<GiBrain className="text-[#6e97ff]"/>,Field:'Artificial Intelligence'},
-                        {image:<BsGraphUpArrow className="text-[#91c653]"/>,Field:'Big Data'},
-                        {image:<GiAutoRepair className="text-[#c891f8]"/>,Field:'Software Testing'},
-                        {image:<FaCode className="text-[#7bdcfc]"/>,Field:'Frontend Development'},
-                        {image:<BsDatabase className="text-[#fea101]"/>,Field:'Databases'},
-                        {image:<TbRobot className="text-[#ff8f9d]"/>,Field:'Robotic Process Automation'},
-                        {image:<IoSettingsOutline className="text-[#6e97ff]"/>,Field:'Data Warehousing and ETL'},
-                        {image:<CiMobile3 className="text-[#7bdcfc]"/>,Field:'Mobile Development'},
-                        {image:<BsWindowFullscreen className="text-[#c891f8]"/>,Field:'Operating Systems'},
-                        {image:<SiMaterialdesign className="text-[#fea101]"/>,Field:'Architecture & Design Patterns'},
-                        {image:<SiHiveBlockchain className="text-[#6e97ff]"/>,Field:'Blockchain'},
-                        {image:<HiOutlineMegaphone className="text-[#ff8f9d]"/>,Field:'Digital Marketing'},
+    const categories = [{image:<IoMdCloudOutline size={40} className="text-[#ff8f9d]"/>,Field:'Cloud Computing'},
+                        {image:<GoInfinity size={40} className="text-[#6e97ff]"/>,Field:'DevOps'},
+                        {image:<GrShieldSecurity size={40} className="text-[#91c653]"/>,Field:'Cyber Security'},
+                        {image:<IoBulbOutline size={40} className="text-[#c891f8]"/>,Field:'BI and Visualization'},
+                        {image:<TfiWorld size={40} className="text-[#7bdcfc]"/>,Field:'Programming & Frameworks'},
+                        {image:<GiMaterialsScience size={40} className="text-[#fea101]"/>,Field:'Data Science'},
+                        {image:<GrDocumentText size={40} className="text-[#ff8f9d]"/>,Field:'Project Management and Methodologies'},
+                        {image:<PiGraduationCap size={40} className="text-[#ff8f9d]"/>,Field:'PG Programs'},
+                        {image:<GiBrain size={40} className="text-[#6e97ff]"/>,Field:'Artificial Intelligence'},
+                        {image:<BsGraphUpArrow size={40} className="text-[#91c653]"/>,Field:'Big Data'},
+                        {image:<GiAutoRepair size={40} className="text-[#c891f8]"/>,Field:'Software Testing'},
+                        {image:<FaCode size={40} className="text-[#7bdcfc]"/>,Field:'Frontend Development'},
+                        {image:<BsDatabase size={40} className="text-[#fea101]"/>,Field:'Databases'},
+                        {image:<TbRobot size={40} className="text-[#ff8f9d]"/>,Field:'Robotic Process Automation'},
+                        {image:<IoSettingsOutline size={40} className="text-[#6e97ff]"/>,Field:'Data Warehousing and ETL'},
+                        {image:<CiMobile3 size={40} className="text-[#7bdcfc]"/>,Field:'Mobile Development'},
+                        {image:<BsWindowFullscreen size={40} className="text-[#c891f8]"/>,Field:'Operating Systems'},
+                        {image:<SiMaterialdesign size={40} className="text-[#fea101]"/>,Field:'Architecture & Design Patterns'},
+                        {image:<SiHiveBlockchain size={40} className="text-[#6e97ff]"/>,Field:'Blockchain'},
+                        {image:<HiOutlineMegaphone size={40} className="text-[#ff8f9d]"/>,Field:'Digital Marketing'},
 
                     ]
         const viewFunction =()=>{
             setView(!view)
         }
     return (
-        <div>
-            <h1 className='px-[0.6rem] my-[1.5rem] text-[#404040] font-semibold'>Discover Top Categories</h1>
+        <div className='px-[0.6rem]'>
+            <h1 className='my-[1.5rem] text-[#404040] font-semibold'>Discover Top Categories</h1>
             {categories.map((categories,index)=>{
                 return(
-                    <div key={index} className='flex items-center text-[12px] text-[#404040] font-semibold'>
+                    <div key={index} className={`${view && index > 6 ?'hidden':''} flex items-center text-[12px] text-[#404040] font-semibold px-[20px] py-[18px] shadow-md w-[22.7rem]`}>
                             {categories.image}
                             <p className='ml-[15px]'>{categories.Field}</p>
                     </div>
