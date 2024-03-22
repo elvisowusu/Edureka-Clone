@@ -42,10 +42,10 @@ function DiscoverTopCategories() {
         }
     return (
         <div className='px-[0.6rem]'>
-            <h1 className='my-[1.5rem] text-[#404040] font-semibold'>Discover Top Categories</h1>
+            <h1 className='mb-[1.5rem] text-[#404040] font-semibold'>Discover Top Categories</h1>
             {categories.map((categories,index)=>{
                 return(
-                    <div key={index} className={`${view && index > 6 ?'hidden':''} flex items-center text-[12px] text-[#404040] font-semibold px-[20px] py-[18px] shadow-md w-[22.7rem]`}>
+                    <div key={index} className={`${view && index > 6 ?'hidden':''} my-[13px] flex items-center text-[12px] text-[#404040] font-semibold px-[20px] py-[18px] w-[22.7rem] shadow-[0_8px_30px_rgb(0,0,0,0.11)] bg-white`}>
                             {categories.image}
                             <p className='ml-[15px]'>{categories.Field}</p>
                     </div>
