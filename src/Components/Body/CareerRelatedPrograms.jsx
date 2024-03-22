@@ -43,9 +43,9 @@ function CareerRelatedPrograms() {
                 <p className='italic text-[14px] text-[#4a4a4a] tracking-wider'>Expore our wide range of courses</p>
             </section>
                 <h1 className='px-[0.6rem] my-[1.5rem] text-[#404040] font-semibold'>Career Related Programs</h1>
-            <section className="px-[1.5rem]">
+            <section className="pl-[1.5rem]">
                 {content.map((items,key)=>{
-                return <section key={key} className="flex my-[1.3rem]">
+                return <section key={key} className="flex my-[1.3rem] shadow-[0_5px_20px_rgb(0,0,0,0.12)]">
                 <div className={`${items.bgGradient} text-[50px] h-[100px] w-[93px] min-w-[93px] flex items-center justify-center`}>
                     {items.img}
                 </div>

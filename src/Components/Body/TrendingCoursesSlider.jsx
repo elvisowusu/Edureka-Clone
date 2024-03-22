@@ -62,7 +62,7 @@ function TrendingCoursesSlider() {
       };
     
     return (
-        <section className="px-[1.5rem]">
+        <section className="pl-[1.5rem]">
           <div className='flex'>
             <div className={`bg-[url(https://d1jnx9ba8s6j9r.cloudfront.net/img/pcpdevops_m.jpg)] text-[50px] h-[166px] w-[93px] min-w-[93px] flex items-center justify-center`}>
                   <img src={PurdueImage} alt="purgueImg" width={49} height={39} className='rounded-md'/>  
@@ -78,7 +78,7 @@ function TrendingCoursesSlider() {
             </div>
           </div>
             {content.map((items,key)=>{
-                return <section key={key} className="flex my-[1.3rem]">
+                return <section key={key} className="flex my-[1.3rem] shadow-[0_5px_20px_rgb(0,0,0,0.12)]">
                 <div className={`${items.bgGradient} text-[50px] h-[100px] w-[93px] min-w-[93px] flex items-center justify-center`}>
                     {items.img}
                 </div>
