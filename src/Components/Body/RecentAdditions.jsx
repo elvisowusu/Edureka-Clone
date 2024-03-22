@@ -26,7 +26,7 @@ function RecentAdditions() {
       };
     return (
         <div>
-            <h1 className='px-[0.6rem] my-[1.5rem] text-[#404040] font-semibold'>Career Related Programs</h1>
+            <h1 className='px-[0.6rem] my-[1.5rem] text-[#404040] font-semibold'>Recent Additions</h1>
             <section className="px-[1.5rem]">
                 {content.map((items,key)=>{
                 return <section key={key} className="flex my-[1.3rem]">
