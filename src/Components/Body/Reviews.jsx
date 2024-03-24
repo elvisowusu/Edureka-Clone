@@ -9,8 +9,14 @@ import Profile7 from '../../assets/Profile7.jpeg'
 import Profile8 from '../../assets/Profile8.jpeg'
 import Profile9 from '../../assets/Profile9.jpeg'
 import Profile10 from '../../assets/Profile10.jpeg'
+import { FaStar } from "react-icons/fa6";
+import { useState } from "react";
 
 function Reviews() {
+    const [read,SetRead]=useState(false);
+    const readFunction=()=>{
+        SetRead(!read)
+    }
     
     const Content =[
         {img:Profile1,Name:'Vivek Yadav',Profession:'Customer Project Manager',Course:'AI and Machine Learning Masters Course',Rating:'',Passage:'The Postgraduate Diploma in AIby Edureka in collaboration with NIT Warangal offered a superb learning experience for working professionals with convenient weekend live classes. The program provided a balanced mix of theoretical knowledge and hands-on experience in model development for ML, deep learning, and NLP. Overall, it exceeded expectations and equipped me with valuable AI skills for the professional arena. Higly recommended for those looking to enhance their expertise an AI.'},
@@ -31,19 +37,22 @@ function Reviews() {
                Content.map((content,id)=>{
                 return(
                     <div key={id} className="flex flex-col px-[30px] py-[25px] mb-[15px] h-[250px] border">
-                        <section>
-                            <img src={content.img} className="rounded-full w-20 h-20"/>
-                            <section>
-                                <p><span>{content.Name}</span> <RxLinkedinLogo /></p>
-                                <p>{content.Profeesion}</p>
+                        <section className="flex items-center mb-[15px] bg-[rgba(255,255,255,.25)]">
+                            <img src={content.img} className="rounded-full w-[4.2rem] h-[4.2rem] mr-[10px]"/>
+                            <section className="w-78% ">
+                                <p className="text-[18px] flex gap-1 items-center mb-[5px] text-[#404040] font-bold"><span>{content.Name}</span> <RxLinkedinLogo size={20} className="text-blue-500"/></p>
+                                <p className="text-[12px] text-[#4a4a4a] font-medium">{content.Profession}</p>
                             </section>
                         </section>
-                        <section>
-                            <p>{content.Course}</p>
-                            <p>{content.Rating}</p>
+                        <section className="mb-[15px]">
+                            <p className="text-[12px] font-semibold text-[#4a4a4a]">{content.Course}</p>
+                            <p className="flex">{[...Array(5)].map((_, index) => (
+                                <FaStar key={index} size={10} />
+                            ))}</p>
                         </section> 
-                        <p>
+                        <p className="text-[#404040] italic text-[14px] h-[90px] overflow-scroll">
                             {content.Passage}
+                            <button>Read {read?'More':'Less'}</button>
                         </p>
             </div> 
                 )
