@@ -39,7 +39,7 @@ function Reviews() {
                     <div key={id} className="flex flex-col px-[30px] py-[25px] mb-[15px] h-[250px] border">
                         <section className="flex items-center mb-[15px] bg-[rgba(255,255,255,.25)]">
                             <img src={content.img} className="rounded-full w-[4.2rem] h-[4.2rem] mr-[10px]"/>
-                            <section className="w-78% ">
+                            <section className="w-78% leading-3">
                                 <p className="text-[18px] flex gap-1 items-center mb-[5px] text-[#404040] font-bold"><span>{content.Name}</span> <RxLinkedinLogo size={20} className="text-blue-500"/></p>
                                 <p className="text-[12px] text-[#4a4a4a] font-medium">{content.Profession}</p>
                             </section>
@@ -47,7 +47,7 @@ function Reviews() {
                         <section className="mb-[15px]">
                             <p className="text-[12px] font-semibold text-[#4a4a4a]">{content.Course}</p>
                             <p className="flex">{[...Array(5)].map((_, index) => (
-                                <FaStar key={index} size={10} />
+                                <FaStar className="text-[#ffc700]" key={index} size={10} />
                             ))}</p>
                         </section> 
                         <p className="text-[#404040] italic text-[14px] h-[90px] overflow-scroll">
