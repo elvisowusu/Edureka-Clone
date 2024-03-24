@@ -52,7 +52,7 @@ function Reviews() {
                         </section> 
                         <p className="text-[#404040] italic text-[14px] h-[90px] overflow-scroll">
                             {content.Passage}
-                            <button>Read {read?'More':'Less'}</button>
+                            <button onClick={readFunction} className="text-[#0575b3]">Read {read?'More':'Less'}</button>
                         </p>
             </div> 
                 )
