@@ -6,6 +6,7 @@ import RecentAdditions from "./RecentAdditions";
 import Reviews from "./Reviews";
 import TrendingCourses from "./TrendingCourses";
 import TrendingCoursesSlider from "./TrendingCoursesSlider";
+import ViewAllCourses from "./ViewAllCourses";
 function Body() {
     return (
         <section className="relative bg-[#F9F9F9]">
@@ -17,6 +18,7 @@ function Body() {
                <RecentAdditions/>
                <DiscoverTopCategories/>
                <Reviews/>
+               <ViewAllCourses/>
         </section>
     );
 }
