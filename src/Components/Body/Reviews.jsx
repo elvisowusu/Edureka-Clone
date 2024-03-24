@@ -13,7 +13,7 @@ import { FaStar } from "react-icons/fa6";
 import { useState } from "react";
 
 function Reviews() {
-    const [read,SetRead]=useState(false);
+    const [read,SetRead]=useState(true);
     const readFunction=()=>{
         SetRead(!read)
     }
@@ -50,7 +50,7 @@ function Reviews() {
                                 <FaStar className="text-[#ffc700]" key={index} size={10} />
                             ))}</p>
                         </section> 
-                        <p className="text-[#404040] italic text-[14px] h-[90px] overflow-scroll">
+                        <p className={`text-[#404040] italic text-[14px] h-[90px] overflow-hidden ${read ? '' : 'overflow-ellipsis'}`}>
                             {content.Passage}
                             <button onClick={readFunction} className="text-[#0575b3]">Read {read?'More':'Less'}</button>
                         </p>
