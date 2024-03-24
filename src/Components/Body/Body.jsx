@@ -3,7 +3,7 @@ import Carousel from "./Carousel";
 import Courses from "./Courses";
 import DiscoverTopCategories from "./DiscoverTopCategories";
 import RecentAdditions from "./RecentAdditions";
-import Reviews from "./Review/Reviews";
+import Reviews from "./Reviews";
 import TrendingCourses from "./TrendingCourses";
 import TrendingCoursesSlider from "./TrendingCoursesSlider";
 function Body() {

@@ -15,7 +15,7 @@ function Reviews() {
         {img:'',Name:'Mohammad Sadaq',Profession:'Associate Basis Consultant',Course:'AWS SysOps Certification Training',Rating:'',Passage:'I recently completed the AWS SysOps Certification Training from Edureka, and I must say it was a fantastic learning experience. The course content was well-structured and covered all the essential concepts of AWS SysOps. The hands-on labs and real-world projects were particularly helpful in solidifying my understanding of the subject. The instructors were knowledgeable and provided clear explanations, making complex topics easy to understand. The course has helped me enhance my skills and has opened up new opportunities in my career. I would highly recommend this course to anyone looking to learn AWS SysOps.'}
     ];
     return (
-        <div className="px-[0.6rem]">
+        <div className="px-[0.6rem] w-[24rem]">
             <h1 className='my-[1.5rem] text-[#404040] font-semibold'>Recent Additions</h1>
             <div className="flex flex-col px-[30px] py-[25px] mb-[15px] h-[250px] border">
                 <section>
