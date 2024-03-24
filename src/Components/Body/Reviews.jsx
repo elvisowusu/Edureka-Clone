@@ -11,6 +11,7 @@ import Profile9 from '../../assets/Profile9.jpeg'
 import Profile10 from '../../assets/Profile10.jpeg'
 import { FaStar } from "react-icons/fa6";
 import { useState } from "react";
+import { IoIosArrowForward } from "react-icons/io";
 
 function Reviews() {
     const [read,SetRead]=useState(true);
@@ -58,6 +59,7 @@ function Reviews() {
                 )
                }) 
             }
+            <button className="text-[#0c5397] text-[12px] font-bold mb-[25px] mt-[5px] w-full flex items-center justify-center">VIEW ALL REVIEWS <IoIosArrowForward size={19}/> </button>
         </div>
     );
 }
