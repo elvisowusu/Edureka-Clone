@@ -9,7 +9,7 @@ function CategoriesItems({CategoriesFunction, CategoriesState}) {
         Aos.init({duration: 400});
     }, [])
     return (
-        <div data-aos={`${CategoriesState?'fade-right':'fade-left'}`} className="overflow-scroll">
+        <div data-aos={`${CategoriesState?'fade-left':'fade-right'}`} className="overflow-scroll">
             <button onClick={CategoriesFunction} className="flex py-[14px] w-full items-center "><IoIosArrowBack size={21}/>Categories</button>
             {categories.map((category, index) =>(
                 <button key={index} className="w-full py-[14px] flex justify-between items-center"><span className="text-left">{category}</span> <IoIosArrowForward size={21}/> </button>
