@@ -3,6 +3,7 @@ import CareerRelatedPrograms from "./CareerRelatedPrograms";
 import Carousel from "./Carousel";
 import Courses from "./Courses";
 import DiscoverTopCategories from "./DiscoverTopCategories";
+import EdurekaEdge from "./EdurekaEdge";
 import RecentAdditions from "./RecentAdditions";
 import Reviews from "./Reviews";
 import TrendingCourses from "./TrendingCourses";
@@ -21,6 +22,7 @@ function Body() {
                <Reviews/>
                <ViewAllCourses/>
                <Blog/>
+               <EdurekaEdge/>
         </section>
     );
 }
