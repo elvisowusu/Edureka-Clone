@@ -21,6 +21,7 @@ function EdurekaEdge() {
                 ]
        
     return (
+        <>
         <div className="mx-[0.6rem] w-[22.9rem]">
             <p className="my-[15px] font-semibold">The Edureka Edge</p>
             {Content.map((content,index)=>{
@@ -46,8 +47,20 @@ function EdurekaEdge() {
                             </section>
             </div>
             })}
-                    <p className="text-center">...</p>
+                    <div className="text-center h-5">...</div>
         </div>
+        <section className="relative mt-[30px] w-full text-center text-white">
+             <img className="object-cover" src="https://d1jnx9ba8s6j9r.cloudfront.net/img/optimized/edureka-business.png" alt="" />
+             <div className="absolute px-[15px] pt-[50px] pb-[30px]">
+                <p className="mb-[0.6rem]"><span className="text-[2.4rem]">edureka!</span> for Business</p>   
+                <section className="px-[10px]">
+                    <p className="text-[1rem] font-bold">No more dull edges in your company. Make your employees into masters.</p>
+                    <p className="text-[12px] mt-[10px]">Nurture talent with instructor-led courses on trending technologies</p>
+                </section>
+                <button className="text-[#0c5397] mt-[15px] text-[16px] bg-white font-bold w-[170px] h-[40px] rounded-sm">LEARN MORE</button>
+             </div>
+        </section>
+        </>
     );
 }
 
