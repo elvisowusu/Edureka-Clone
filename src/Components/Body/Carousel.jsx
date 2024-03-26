@@ -14,12 +14,8 @@ function Carousel() {
     }
 
     return (
-        <div className="relative mt-[0.5rem]">
-           <div className="" >
-                <a href="http://">
-                    <img className="min-h-[480px] transition-transform ease-out duration-500 object-cover " src={slides[current]} alt="" />
-                </a>
-            </div> 
+        <div className="relative mt-[0.5rem]">    
+             <img className="min-h-[480px] transition-transform ease-out duration-500 object-cover " src={slides[current]} alt="" />
            <section className="absolute top-[50%] flex justify-between w-full px-[1rem]">
             <button onClick={prevSlide}><SlArrowLeft className="slider"/></button>
             <button onClick={nextSlide}><SlArrowRight className="slider"/></button>
