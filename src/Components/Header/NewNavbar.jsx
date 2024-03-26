@@ -3,6 +3,8 @@ import { BiSearch, BiSolidPhone } from "react-icons/bi";
 import { UserFooterContext } from "./Header";
 import { useContext,useState,useEffect } from "react";
 import NavMenu from "./NavMenu";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function NewNavbar() {
     const [showNavMenu,setShowNavMenu]=useState(false);
@@ -14,6 +16,7 @@ function NewNavbar() {
             console.log(scroll);
         };
         window.addEventListener("scroll", handleScroll);
+        Aos.init({duration: 300});
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
@@ -37,7 +40,7 @@ function NewNavbar() {
 
                     <section className="inline-flex items-center gap-2 pb-2">
                         <BiSolidPhone className={`text-white h-[1.1rem] w-[1.1rem] ${scroll >50 ? 'hidden':''}`}/>
-                        {!close.closeState && <button className={`bg-white rounded-sm px-[0.7rem] py-[0.1rem] text-[#0c5397] text-[14px] font-semibold ${scroll > 50?'hidden':''}`} onClick={close.closeFunction}>View Offer</button>}
+                        {!close.closeState && <button data-aos="zoom-out-down" className={`bg-white rounded-sm px-[0.7rem] py-[0.1rem] text-[#0c5397] text-[14px] font-semibold ${scroll > 50?'hidden':''}`} onClick={close.closeFunction}>View Offer</button>}
                     </section>
                 </section>
 
