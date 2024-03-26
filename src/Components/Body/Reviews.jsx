@@ -14,9 +14,11 @@ import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
 function Reviews() {
-    const [read,SetRead]=useState(true);
-    const readFunction=()=>{
-        SetRead(!read)
+    const [read,setRead]=useState(new Array(10).fill(true));
+    const readFunction=(id)=>{
+        const currentRead =[...read];
+        currentRead[id]=!currentRead[id]
+        setRead(currentRead)
     }
     
     const Content =[
@@ -52,8 +54,8 @@ function Reviews() {
                             ))}</p>
                         </section> 
                         <p className={`text-[#404040] italic text-[14px] h-[90px] overflow-scroll`}>
-                            {read?content.Short:content.Passage}
-                            <span onClick={readFunction} className="text-[#0575b3] not-italic ml-1">Read {read?'More':'Less'}</span>
+                            {read[id] ?content.Short : content.Passage}
+                            <span onClick={()=>readFunction(id)} className="text-[#0575b3] not-italic ml-1">Read {read[id]?'More':'Less'}</span>
                         </p>
             </div> 
                 )
