@@ -8,18 +8,19 @@ function EdurekaEdge() {
     return (
         <div className="mx-[0.6rem]">
             <p className="mt-[15px] font-semibold">The Edureka Edge</p>
-            <div className="mt-[15px]">
-                <div>
-                    <section className="h-[85px]">
-                        <img src="" alt="" />
-                    </section>
-                    <section>
-                        <h2>
-
-                        </h2>
-                    </section>
-                </div>
-            </div>
+            {Content.map((content,index)=>{
+                return <div key={index} className="mt-[15px]">
+                        <div >
+                            <section className="h-[85px]">
+                                <img src="" alt="" />
+                            </section>
+                            <section>
+                                <h2>{content.h2}</h2>
+                                <p>{content.p}</p>
+                            </section>
+                        </div>
+                    </div>
+            })}
         </div>
     );
 }
