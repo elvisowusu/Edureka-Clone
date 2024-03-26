@@ -1,3 +1,4 @@
+import Blog from "./Blog";
 import CareerRelatedPrograms from "./CareerRelatedPrograms";
 import Carousel from "./Carousel";
 import Courses from "./Courses";
@@ -19,6 +20,7 @@ function Body() {
                <DiscoverTopCategories/>
                <Reviews/>
                <ViewAllCourses/>
+               <Blog/>
         </section>
     );
 }
