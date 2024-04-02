@@ -23,7 +23,7 @@ const reducer=(state,action)=>{
 }
 
 
-function NewFooter() {
+function Header() {
 
    const [state, dispatch]=useReducer(reducer,{clickClose:true,screenWidth:window.innerWidth,grabOffer:false,scrolled:false,})
    useEffect(() => {
@@ -57,4 +57,4 @@ function NewFooter() {
     );
 }
 
-export default NewFooter;
+export default Header;
