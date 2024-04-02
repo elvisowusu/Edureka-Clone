@@ -1,6 +1,6 @@
 
 import React,{ useEffect, useReducer} from "react";
-import NewBeforeNav from "./newBeforeNav";
+import NewBeforeNav from "./NewBeforeNav";
 import NewNavbar from "./newNavbar";
 import NewAfterNav from "./newAfterNav";
 
