@@ -14,7 +14,7 @@ const reducer=(state,action)=>{
         case 'SCREENRESIZE':
             return {...state,screenWidth:window.innerWidth}
         case 'GRABOFFER':
-            return {...state,grabOffer:!state.grapOffer}
+            return {...state,grabOffer:!state.grabOffer}
         case 'SCROLL':
             return {...state,scrolled:!state.scrolled}
         default:
