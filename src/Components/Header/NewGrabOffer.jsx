@@ -1,5 +1,5 @@
 import { AiOutlineClose } from "react-icons/ai";
-import { UserGrabOfferContext } from "./newBeforeNav";
+import { UserGrabOfferContext } from "./NewBeforeNav";
 import { useContext } from "react";
 
 function NewGrabOffer() {
