@@ -1,8 +1,8 @@
 
 import React,{ useEffect, useReducer} from "react";
 import NewBeforeNav from "./NewBeforeNav";
-import NewNavbar from "./newNavbar";
-import NewAfterNav from "./newAfterNav";
+import NewNavbar from "./NewNavbar";
+import NewAfterNav from "./NewAfterNav";
 
 export const UserFooterContext = React.createContext()
 
