@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { FaInfinity, FaQuoteLeft } from "react-icons/fa";
 import { BsGraphUpArrow } from "react-icons/bs";
@@ -19,6 +18,16 @@ function EdurekaEdge() {
                     {p:'Top 10 courses you should take in 2019 for a great career ahead',img:indiatoday},
                     {p:"Edureka Launches Machine Learning Engineer Master's Program to Meet Rising Demand for ML Engineers",img:bwEducation}
                 ]
+    const CorporateClients=[
+        {name:"CocaCola",img:"https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1714656664/img/optimized/cocacola-corp.png",href:"https://www.coca-colaindia.com/"},
+        {name:"Visa",img:"https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1714656664/img/optimized/visa-corp.png",href:"https://www.visa.co.in/"},
+        {name:"Cisco",img:"https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1714656664/img/optimized/cisco-corp.png",href:"https://www.cisco.com/c/en_in/index.html"},
+        {name:"Wipro",img:"https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1714656664/img/optimized/wipro_new-corp.png",href:"https://www.wipro.com/en-IN/"},
+        {name:"Dell",img:"https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1714656664/img/optimized/compdd.png",href:"https://www.dell.com/en-in"},
+        {name:"Citi",img:"https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1714656664/img/optimized/city-corp.png",href:"https://www.citigroup.com/citi/"},
+        {name:"Honeywell",img:"https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1714656664/img/optimized/honeywell-corp.png",href:"https://www.honeywell.com/"},
+        {name:"Walmart",img:"https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1714656664/img/optimized/walmart-corp.png",href:"https://www.walmart.com"}
+        ]
        
     return (
         <>
@@ -50,8 +59,7 @@ function EdurekaEdge() {
                     <div className="text-center h-5">...</div>
         </div>
         <section className="relative mt-[30px] w-full text-center text-white">
-             <img className="object-cover" src="https://d1jnx9ba8s6j9r.cloudfront.net/img/optimized/edureka-business.png" alt="" />
-             <div className="absolute px-[15px] pt-[50px] pb-[30px]">
+             <div className="z-20 px-[15px] pt-[50px] pb-[30px] bg-[url(https://d1jnx9ba8s6j9r.cloudfront.net/img/optimized/edureka-business.png)] bg-center">
                 <p className="mb-[0.6rem]"><span className="text-[2.4rem]">edureka!</span> for Business</p>   
                 <section className="px-[10px]">
                     <p className="text-[1rem] font-bold">No more dull edges in your company. Make your employees into masters.</p>
@@ -59,6 +67,18 @@ function EdurekaEdge() {
                 </section>
                 <button className="text-[#0c5397] mt-[15px] text-[16px] bg-white font-bold w-[170px] h-[40px] rounded-sm">LEARN MORE</button>
              </div>
+        </section>
+        <section className="bg-[#ffffff] px-[15px] ">
+            <h1 className="py-[40px] text-center">Our Corporate Clients</h1>
+            <div className="grid-cols-3 grid grid-rows-3 gap-2 items-center justify-center ">
+            {CorporateClients.map((clients,id)=>{
+                return <img key={id} src={clients.img} alt={clients.name} href={clients.href} />
+            })}
+            </div>
+        </section>
+        <section className="px-[15px]">
+            <img className="py-[25px] w-[110px]" src="https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1714656664/img/Edureka_V_logo.webp" alt="" />
+            <h1 className="text-[14px] text-[#030303] font-bold mb-[20px]">TRENDING CERTIFICATION COURSES</h1>
         </section>
         </>
     );
